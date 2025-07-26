@@ -13,15 +13,12 @@
       min-height: 100vh;
       position: relative;
       z-index: 1;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      z-index: -1;
       background: 
         linear-gradient(rgba(10,20,40,0.7), rgba(10,20,40,0.7)),
-        url('https://images.unsplash.com/photo-1467301540037-ff0dc0fd6dd3?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;
+        url('https://images.unsplash.com/photo-1467301540037-ff0dc0fd6dd3?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat fixed;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     header {
       background-color: rgba(0, 0, 0, 0.7);
@@ -62,16 +59,74 @@
       backdrop-filter: blur(4px);
       box-shadow: 0 2px 18px rgba(0,0,0,0.3);
     }
+    .card .links {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
     .card a {
       color: #ffe600;
       text-decoration: none;
       font-weight: bold;
       text-shadow: 0 1px 8px #000;
+      padding: 4px 0;
     }
-    footer {
-      background-color: rgba(0, 0, 0, 0.85);
-      padding: 20px;
+    .card a.book {
+      color: #222;
+      background: #ffe600;
+      border-radius: 4px;
+      font-weight: bold;
+      margin: 2px 0 0 0;
+      padding: 6px 0;
+      text-shadow: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .card a.book:hover {
+      background: #fff700;
+      color: #111;
+    }
+    .card .subtitle {
+      font-size: 0.95em;
+      color: #ffeb3b;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .visa-info {
+      background-color: rgba(0,0,0,0.8);
+      margin: 20px auto;
+      padding: 24px 18px 18px 18px;
+      border-radius: 15px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.4);
+      max-width: 800px;
+      color: #ffe600;
+      font-size: 1.1em;
+    }
+    .visa-info a {
+      color: #fff700;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .map-visual {
+      background: rgba(0,0,0,0.7);
+      max-width: 800px;
+      margin: 32px auto 0 auto;
+      padding: 18px 14px 22px 14px;
+      border-radius: 18px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.4);
       text-align: center;
+    }
+    .map-visual h2 {
+      color: #ffe600;
+      margin-top: 0;
+    }
+    .map-visual iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+      margin-top: 10px;
     }
     form {
       display: flex;
@@ -105,14 +160,6 @@
     button:hover {
       background-color: #fff700;
     }
-    .map-link {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .map-link a {
-      color: #ffcc00;
-      text-decoration: underline;
-    }
     @media (max-width: 900px) {
       .regions, .top-destinations, .experiences {
         flex-direction: column;
@@ -123,6 +170,12 @@
       .card {
         width: 96vw;
         max-width: 400px;
+      }
+      .visa-info, .map-visual {
+        padding: 16px 6px 12px 6px;
+      }
+      .map-visual iframe {
+        height: 240px;
       }
     }
   </style>
@@ -139,21 +192,41 @@
     <p>Explore, eat, party, and connect like a local. Our tours are personal, powerful, and unforgettable.</p>
   </section>
 
+  <section class="visa-info">
+    <h2>Visa & Travel Info</h2>
+    <p>
+      <strong>Official E-visa site:</strong> 
+      <a href="https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt" target="_blank">Vietnam Government E-Visa Portal</a>
+    </p>
+    <ul>
+      <li><strong>North Vietnam:</strong> Most travelers arrive via Hanoi (Noi Bai Airport). Visa on arrival is available with e-visa. Note: Border crossings from China may have different rules.</li>
+      <li><strong>Central Vietnam:</strong> Da Nang & Hue accept e-visas at airports and land borders. Ideal for exploring central coast and mountains.</li>
+      <li><strong>South Vietnam:</strong> Ho Chi Minh City is the main gateway. E-visa accepted at Tan Son Nhat airport and main land crossings from Cambodia.</li>
+    </ul>
+    <p>Always check the latest official info and requirements before booking. <a href="visa-travel-tips.html">More visa tips</a></p>
+  </section>
+
   <section class="regions">
     <div class="card">
       <h3>North Vietnam</h3>
       <p>Hanoi, Sapa, Ha Long Bay, and the world’s largest cave.</p>
-      <a href="north-vietnam.html">Explore North</a>
+      <div class="links">
+        <a href="north-vietnam.html">More Info</a>
+      </div>
     </div>
     <div class="card">
       <h3>Central Vietnam</h3>
       <p>Da Nang, Hoi An, Hue, and the stunning coastline.</p>
-      <a href="central-vietnam.html">Explore Central</a>
+      <div class="links">
+        <a href="central-vietnam.html">More Info</a>
+      </div>
     </div>
     <div class="card">
       <h3>South Vietnam</h3>
       <p>Ho Chi Minh City, Mekong Delta, and Phu Quoc Island.</p>
-      <a href="south-vietnam.html">Explore South</a>
+      <div class="links">
+        <a href="south-vietnam.html">More Info</a>
+      </div>
     </div>
   </section>
 
@@ -161,26 +234,52 @@
     <div class="card">
       <h3>Phu Quoc Island</h3>
       <p>Voted one of Asia’s top beach escapes. Great food, nightlife, and boat tours.</p>
-      <a href="phu-quoc.html">More Info</a><br>
-      <a href="https://wa.me/27794720078?text=I want to book a Phu Quoc tour" target="_blank">Book Tour</a>
+      <div class="links">
+        <a href="phu-quoc.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a Phu Quoc tour" target="_blank">Book Tour</a>
+      </div>
     </div>
     <div class="card">
       <h3>Da Nang</h3>
       <p>Surf, hike, and eat in Vietnam’s cleanest and most livable city.</p>
-      <a href="danang.html">More Info</a><br>
-      <a href="https://wa.me/27794720078?text=I want to book a Da Nang tour" target="_blank">Book Tour</a>
+      <div class="links">
+        <a href="danang.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a Da Nang tour" target="_blank">Book Tour</a>
+      </div>
     </div>
     <div class="card">
       <h3>Ha Long Bay</h3>
       <p>World heritage site. Limestone cliffs, overnight cruises, and hidden coves.</p>
-      <a href="ha-long-bay.html">More Info</a><br>
-      <a href="https://wa.me/27794720078?text=I want to book a Ha Long Bay tour" target="_blank">Book Tour</a>
+      <div class="links">
+        <a href="ha-long-bay.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a Ha Long Bay tour" target="_blank">Book Tour</a>
+      </div>
     </div>
     <div class="card">
       <h3>Son Doong Cave</h3>
       <p>The largest cave in the world. A must-see for true explorers.</p>
-      <a href="son-doong.html">More Info</a><br>
-      <a href="https://wa.me/27794720078?text=I want to book a cave adventure" target="_blank">Book Tour</a>
+      <div class="links">
+        <a href="son-doong.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a cave adventure" target="_blank">Book Tour</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="subtitle">New!</h3>
+      <h3>Dalat Mountains</h3>
+      <p>Cool pine forests, flower farms, coffee plantations, and epic mountain views. Trek, relax, or adventure!</p>
+      <div class="links">
+        <a href="dalat.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to see the Dalat mountains" target="_blank">Book Dalat Tour</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="subtitle">Hidden Gem</h3>
+      <h3>Daklak Waterfalls</h3>
+      <p>Spectacular jungle waterfalls and untamed highlands. Ideal for off-the-beaten-track adventurers.</p>
+      <div class="links">
+        <a href="daklak-waterfalls.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want a Daklak waterfall tour" target="_blank">Book Daklak Adventure</a>
+      </div>
     </div>
   </section>
 
@@ -188,22 +287,31 @@
     <div class="card">
       <h3>Boat Braais</h3>
       <p>BBQ + beers + islands + music. Perfect for groups and parties!</p>
-      <a href="boat-braai-tours.html">Learn More</a>
+      <div class="links">
+        <a href="boat-braai-tours.html">Learn More</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a boat braai tour" target="_blank">Book</a>
+      </div>
     </div>
     <div class="card">
       <h3>Secret Waterfalls</h3>
       <p>Jungle treks to magical falls only locals know.</p>
-      <a href="https://wa.me/27794720078?text=I want a secret waterfall tour" target="_blank">Book</a>
+      <div class="links">
+        <a class="book" href="https://wa.me/27794720078?text=I want a secret waterfall tour" target="_blank">Book</a>
+      </div>
     </div>
     <div class="card">
       <h3>Surfing Lessons</h3>
       <p>Catch a wave in Da Nang or Mui Ne with local instructors.</p>
-      <a href="https://wa.me/27794720078?text=I want surf lessons" target="_blank">Book</a>
+      <div class="links">
+        <a class="book" href="https://wa.me/27794720078?text=I want surf lessons" target="_blank">Book</a>
+      </div>
     </div>
     <div class="card">
       <h3>Bike Across Vietnam</h3>
       <p>Rent bikes for epic solo or guided cross-country trips.</p>
-      <a href="https://wa.me/27794720078?text=I want to rent a bike and ride Vietnam!" target="_blank">Start Trip</a>
+      <div class="links">
+        <a class="book" href="https://wa.me/27794720078?text=I want to rent a bike and ride Vietnam!" target="_blank">Start Trip</a>
+      </div>
     </div>
   </section>
 
@@ -217,9 +325,16 @@
     </form>
   </section>
 
-  <div class="map-link">
-    <p><a href="https://maps.google.com?q=vietnam" target="_blank">View Vietnam on Google Maps</a></p>
-  </div>
+  <section class="map-visual">
+    <h2>Vietnam on the Map</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12624117.563607395!2d97.34380775000001!3d15.9266657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc2c2a5c1e1%3A0x5a6b6b6b6b6b6b6b!2sVietnam!5e0!3m2!1sen!2sza!4v1643120661480!5m2!1sen!2sza" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      title="Vietnam Google Map"></iframe>
+    <p style="margin-top:10px;">
+      <a href="https://maps.google.com?q=vietnam" target="_blank" style="color:#ffe600;">Open Vietnam in Google Maps</a>
+    </p>
+  </section>
 
   <footer>
     <p>🇿🇦 Madiba Meets Vietnam | ✉️ hughboynewlands@gmail.com | 📞 +27 79 472 0078</p>
