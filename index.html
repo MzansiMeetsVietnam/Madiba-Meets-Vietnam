@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Madiba Meets Vietnam</title>
   <meta name="description" content="Authentic tours, hidden gems, and unforgettable adventures in Vietnam. Explore Phu Quoc Island, Ha Long Bay, Ho Chi Minh City, scuba diving, golf tours, and more." />
+  <!-- Open Graph & Twitter Card for SEO and sharing -->
+  <meta property="og:title" content="Madiba Meets Vietnam" />
+  <meta property="og:description" content="Authentic tours, hidden gems, and unforgettable adventures in Vietnam." />
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2e/Phu_Quoc_Bai_Sao_Beach.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Madiba Meets Vietnam" />
+  <meta name="twitter:description" content="Authentic tours, hidden gems, and unforgettable adventures in Vietnam." />
+  <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2e/Phu_Quoc_Bai_Sao_Beach.jpg" />
+  <!-- Google Analytics placeholder -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+  </script> -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <style>
     body {
@@ -169,10 +187,11 @@
   </style>
 </head>
 <body>
-  <header class="bg1">
+<main id="main-content" aria-label="Main content">
+  <header class="bg1" role="banner">
     <h1 style="margin-top: 0.5em;">Madiba Meets Vietnam</h1>
     <p style="font-size:1.2em;">Authentic tours, hidden gems, and unforgettable adventures</p>
-    <nav style="margin-top: 1.5em;">
+    <nav style="margin-top: 1.5em;" aria-label="Main navigation">
       <div class="dropdown">
         <button>North</button>
         <div class="dropdown-content">
@@ -203,12 +222,12 @@
     </nav>
   </header>
 
-  <section class="intro bg2" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="intro bg2" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Mission">
     <h2>Our Mission</h2>
     <p>Having been born and bred in Zululand and having had adventure in Vietnam for 8 years, I have plenty of hidden gems to share. My goal is to connect you with the real Vietnam—its people, food, and wild beauty—through authentic, unforgettable experiences.</p>
   </section>
 
-  <section class="best-time bg3" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="best-time bg3" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Best Time to Visit">
     <h2>Best Time to Visit Vietnam</h2>
     <ul>
       <li><strong>North Vietnam:</strong> March–May & September–November (cool, dry, best for trekking and sightseeing)</li>
@@ -218,7 +237,7 @@
     <!-- Source: https://www.lonelyplanet.com/articles/best-time-to-visit-hcmc -->
   </section>
 
-  <section class="festivals bg4" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="festivals bg4" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Festivals">
     <h2>Top Festivals in Vietnam</h2>
     <ul>
       <li><strong>Tet (Lunar New Year):</strong> Vietnam’s biggest celebration, usually in late January or February. Streets come alive with flowers, food, and fireworks.</li>
@@ -230,9 +249,9 @@
     </ul>
   </section>
 
-  <section class="destinations bg2" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="destinations bg2" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Top Destinations">
     <div class="card" id="phuquoc">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Phu_Quoc_Bai_Sao_Beach.jpg" alt="Phu Quoc Island Bai Sao Beach" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Phu_Quoc_Bai_Sao_Beach.jpg" alt="Phu Quoc Island Bai Sao Beach" width="320" height="180" loading="lazy" />
       <h3>Phu Quoc Island</h3>
       <p>Asia’s top beach escape. White sand beaches, turquoise waters, vibrant night markets, and world-class snorkeling and scuba diving.</p>
       <ul>
@@ -248,7 +267,7 @@
       </div>
     </div>
     <div class="card" id="halong">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Halong_Bay_in_Vietnam.jpg" alt="Ha Long Bay limestone cliffs" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Halong_Bay_in_Vietnam.jpg" alt="Ha Long Bay limestone cliffs" width="320" height="180" loading="lazy" />
       <h3>Ha Long Bay</h3>
       <p>UNESCO World Heritage site. Dramatic limestone cliffs, emerald waters, overnight cruises, and hidden caves.</p>
       <ul>
@@ -263,7 +282,7 @@
       </div>
     </div>
     <div class="card" id="hcmc">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Ho Chi Minh City skyline at night" />
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Ho Chi Minh City skyline at night" width="320" height="180" loading="lazy" />
       <h3>Ho Chi Minh City</h3>
       <p>Vietnam’s vibrant southern hub. Bustling markets, French colonial architecture, rooftop bars, and incredible street food.</p>
       <ul>
@@ -277,7 +296,7 @@
       </div>
     </div>
     <div class="card" id="nhatrang">
-      <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Nha Trang beach and islands" />
+      <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Nha Trang beach and islands" width="320" height="180" loading="lazy" />
       <h3>Nha Trang</h3>
       <p>Vietnam’s premier beach city. Famous for its long sandy coastline, vibrant nightlife, and excellent island hopping tours.</p>
       <ul>
@@ -291,7 +310,7 @@
       </div>
     </div>
     <div class="card" id="dalat">
-      <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Da Lat mountains" />
+      <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Da Lat mountains" width="320" height="180" loading="lazy" />
       <h3>Da Lat Mountains</h3>
       <p>Misty pine forests, cool climate, flower gardens, and French villas. Trekking, canyoning, and waterfalls in Vietnam’s romantic highlands.</p>
       <ul>
@@ -305,7 +324,7 @@
       </div>
     </div>
     <div class="card" id="daklak">
-      <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3fd9?auto=format&fit=crop&w=800&q=80" alt="Dak Lak waterfalls" />
+      <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3fd9?auto=format&fit=crop&w=800&q=80" alt="Dak Lak waterfalls" width="320" height="180" loading="lazy" />
       <h3>Dak Lak Waterfalls</h3>
       <p>Home to Vietnam’s most spectacular waterfalls and ethnic minority culture. Explore Dray Nur, Dray Sap, and Gia Long falls, and the wild jungles of the Central Highlands.</p>
       <ul>
@@ -319,7 +338,7 @@
       </div>
     </div>
     <div class="card" id="mekong">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Mekong_Delta_boats.jpg" alt="Mekong Delta river boats" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Mekong_Delta_boats.jpg" alt="Mekong Delta river boats" width="320" height="180" loading="lazy" />
       <h3>Mekong Delta</h3>
       <p>The lush, riverine heart of southern Vietnam. Explore floating markets, traditional villages, and endless waterways by boat.</p>
       <ul>
@@ -346,9 +365,9 @@
     </div>
   </section>
 
-  <section class="experiences bg3" style="background: linear-gradient(rgba(0,51,102,0.85), rgba(0,184,148,0.7)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="experiences bg3" style="background: linear-gradient(rgba(0,51,102,0.85), rgba(0,184,148,0.7)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Experiences">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Jungle adventure in Vietnam" />
+      <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Jungle adventure in Vietnam" width="320" height="180" loading="lazy" />
       <h3>Jungle Adventures</h3>
       <p>Explore the wild jungles of Vietnam on guided treks, wildlife spotting, and camping trips. Discover the biodiversity of Cat Tien, Bach Ma, and Phong Nha-Ke Bang National Parks.</p>
       <ul>
@@ -361,7 +380,7 @@
       </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" alt="4x4 offroad Vietnam" />
+      <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" alt="4x4 offroad Vietnam" width="320" height="180" loading="lazy" />
       <h3>4x4 Offroad Trips</h3>
       <p>Take on Vietnam’s rugged terrain with thrilling 4x4 adventures. From the mountains of the north to the sand dunes of Mui Ne, experience the country off the beaten path.</p>
       <ul>
@@ -374,7 +393,7 @@
       </div>
     </div>
     <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Scuba_diving_in_Vietnam.jpg" alt="Scuba diving in Vietnam" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Scuba_diving_in_Vietnam.jpg" alt="Scuba diving in Vietnam" width="320" height="180" loading="lazy" />
       <h3>Scuba Diving</h3>
       <p>Discover vibrant coral reefs and marine life in Phu Quoc, Nha Trang, and Con Dao. Perfect for beginners and experienced divers.</p>
       <ul>
@@ -387,7 +406,7 @@
       </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Boat party in Vietnam" />
+      <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Boat party in Vietnam" width="320" height="180" loading="lazy" />
       <h3>Boat Braais</h3>
       <p>BBQ, beers, islands, and music. Perfect for groups and parties!</p>
       <div class="links">
@@ -396,7 +415,7 @@
       </div>
     </div>
     <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Ba_Na_Hills_Golf_Club%2C_Da_Nang.jpg" alt="Ba Na Hills Golf Club, Da Nang" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Ba_Na_Hills_Golf_Club%2C_Da_Nang.jpg" alt="Ba Na Hills Golf Club, Da Nang" width="320" height="180" loading="lazy" />
       <h3>Golf Tours</h3>
       <p>Play at award-winning golf courses in Da Nang, Ho Chi Minh City, Hanoi, and Phu Quoc. Scenic fairways, world-class facilities, and tropical views.</p>
       <ul>
@@ -411,7 +430,7 @@
       </div>
     </div>
   </section>
-  <section class="intro bg4" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="intro bg4" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Best Local Dishes">
     <h2>Best Local Dishes in Vietnam</h2>
     <ul>
       <li><strong>Banh Mi:</strong> Vietnamese baguette sandwich with pork, pate, pickled veggies, and herbs</li>
@@ -424,7 +443,7 @@
     </ul>
   </section>
 
-  <section class="intro bg2" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="intro bg2" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Western Restaurants">
     <h2>Western Restaurants in Vietnam</h2>
     <ul>
       <li><strong>Pizza 4P's:</strong> <a href="https://pizza4ps.com/" target="_blank">Pizza 4P's (HCMC, Hanoi, Danang, Nha Trang)</a> – Japanese-Italian fusion, famous for cheese made in-house.</li>
@@ -436,7 +455,7 @@
     <p>More: <a href="https://www.tripadvisor.com/Restaurants-g293921-c8-Vietnam.html" target="_blank">TripAdvisor: Best Western Restaurants in Vietnam</a></p>
   </section>
 
-  <section class="visa-info bg1" style="background: linear-gradient(rgba(0,51,102,0.85), rgba(0,184,148,0.7)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; border: 2px solid #00b894; box-shadow: 0 4px 24px #00336655;">
+  <section class="visa-info bg1" style="background: linear-gradient(rgba(0,51,102,0.85), rgba(0,184,148,0.7)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; border: 2px solid #00b894; box-shadow: 0 4px 24px #00336655;" aria-label="Visa & Travel Info">
     <h2 style="color:#fff;">Visa & Travel Info</h2>
     <div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:32px;">
       <div style="flex:2; min-width:220px;">
@@ -456,8 +475,8 @@
     </div>
   </section>
 
-  <section class="map-visual bg3" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
-  <section class="intro bg3" id="bikerentals" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; margin-bottom:32px;">
+  <section class="map-visual bg3" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;" aria-label="Vietnam Map">
+  <section class="intro bg3" id="bikerentals" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; margin-bottom:32px;" aria-label="Bike Rentals">
     <h2>Bike Rentals for Cross-Country Trips</h2>
     <p>Vietnam is a dream for cross-country motorbike adventures. Rent a bike in any major city and explore the legendary Hai Van Pass, the Mekong Delta, or the entire length of the country from north to south.</p>
     <ul>
@@ -489,7 +508,7 @@
     </form>
   </section>
 
-  <section class="intro bg2" style="background: linear-gradient(rgba(255,255,255,0.95), rgba(0,184,148,0.15)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; border: 2px solid #e6c200; box-shadow: 0 4px 24px #00336622; margin-bottom: 32px;">
+  <section class="intro bg2" style="background: linear-gradient(rgba(255,255,255,0.95), rgba(0,184,148,0.15)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; border: 2px solid #e6c200; box-shadow: 0 4px 24px #00336622; margin-bottom: 32px;" aria-label="TEFL Job Placement">
     <h2 style="color:#bfa14a;">TEFL Job Placement & Accommodation Assistance</h2>
     <p style="font-size:1.15em; color:#003366;">Are you a native or fluent English speaker looking to teach in Vietnam? We offer job placement services and help you find safe, affordable accommodation in cities and towns across the country.</p>
     <ul style="color:#003366;">
@@ -501,10 +520,17 @@
     </ul>
     <p style="margin-top:1em; color:#003366;">Contact us for more info: <a href="mailto:hughboynewlands@gmail.com" style="color:#bfa14a;">hughboynewlands@gmail.com</a> or WhatsApp <a href="https://wa.me/27794720078" style="color:#bfa14a;">+27 79 472 0078</a></p>
   </section>
+  <section aria-label="Share this page" style="text-align:center; margin: 32px 0 0 0;">
+    <h2 style="font-size:1.3em; color:#bfa14a; margin-bottom:0.5em;">Share this page</h2>
+    <a href="https://twitter.com/intent/tweet?text=Check%20out%20Madiba%20Meets%20Vietnam!%20Authentic%20tours%20and%20hidden%20gems%20in%20Vietnam%20https://yourdomain.com/" target="_blank" rel="noopener" aria-label="Share on Twitter" style="margin:0 10px; color:#1da1f2; font-size:1.5em; text-decoration:none;">🐦 Twitter</a>
+    <a href="https://wa.me/?text=Check%20out%20Madiba%20Meets%20Vietnam!%20Authentic%20tours%20and%20hidden%20gems%20in%20Vietnam%20https://yourdomain.com/" target="_blank" rel="noopener" aria-label="Share on WhatsApp" style="margin:0 10px; color:#25d366; font-size:1.5em; text-decoration:none;">💬 WhatsApp</a>
+    <a href="mailto:?subject=Madiba%20Meets%20Vietnam&body=Check%20out%20this%20amazing%20Vietnam%20travel%20site:%20https://yourdomain.com/" aria-label="Share by Email" style="margin:0 10px; color:#bfa14a; font-size:1.5em; text-decoration:none;">✉️ Email</a>
+  </section>
   <footer style="background: #fffbe6; border-top: 2px solid #bfa14a; padding: 24px 0 12px 0; text-align: center; font-family: 'Playfair Display', serif; color: #003366;">
     <p style="font-size:1.1em; margin-bottom: 0.5em;">🇿🇦 Madiba Meets Vietnam &nbsp;|&nbsp; ✉️ hughboynewlands@gmail.com &nbsp;|&nbsp; 📞 +27 79 472 0078</p>
     <p style="margin-bottom:0.5em;"><a href="visa-travel-tips.html" style="color: #bfa14a; text-decoration:underline;">Visa & Travel Info</a> | <a href="contact-booking.html" style="color: #bfa14a; text-decoration:underline;">Contact Us</a></p>
     <div style="font-size:0.95em; color:#bfa14a;">&copy; 2025 Madiba Meets Vietnam. All rights reserved.</div>
   </footer>
+</main>
 </body>
 </html>
