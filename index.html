@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Madiba Meets Vietnam</title>
+  <meta name="description" content="Authentic tours, hidden gems, and unforgettable adventures in Vietnam. Explore Phu Quoc Island, Ha Long Bay, Ho Chi Minh City, scuba diving, golf tours, and more." />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     body {
@@ -11,14 +12,8 @@
       font-family: 'Roboto', sans-serif;
       color: white;
       min-height: 100vh;
-      position: relative;
-      z-index: 1;
-      background: 
-        linear-gradient(rgba(10,20,40,0.7), rgba(10,20,40,0.7)),
-        url('https://images.unsplash.com/photo-1467301540037-ff0dc0fd6dd3?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat fixed;
+      background: linear-gradient(rgba(10,20,40,0.7), rgba(10,20,40,0.7)), url('https://images.unsplash.com/photo-1467301540037-ff0dc0fd6dd3?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat fixed;
       background-attachment: fixed;
-      background-size: cover;
-      background-repeat: no-repeat;
     }
     header {
       background-color: rgba(0, 0, 0, 0.7);
@@ -34,30 +29,37 @@
     h2, h3 {
       text-shadow: 0 1px 6px rgba(0,0,0,0.6);
     }
-    .intro {
+    .intro, .visa-info, .map-visual, .best-time, .festivals {
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.7);
-      max-width: 800px;
+      max-width: 900px;
       margin: 30px auto;
       border-radius: 15px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.5);
     }
-    .regions, .top-destinations, .experiences {
+    .destinations, .experiences, .golf-tours {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       padding: 40px 20px;
     }
     .card {
       background-color: rgba(36,36,36, 0.7);
       border: 1px solid #fff;
       border-radius: 12px;
-      width: 260px;
+      width: 320px;
       padding: 20px;
       text-align: center;
       backdrop-filter: blur(4px);
       box-shadow: 0 2px 18px rgba(0,0,0,0.3);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
     }
     .card .links {
       margin-top: 12px;
@@ -92,76 +94,8 @@
       margin-bottom: 6px;
       display: block;
     }
-    .visa-info {
-      background-color: rgba(0,0,0,0.8);
-      margin: 20px auto;
-      padding: 24px 18px 18px 18px;
-      border-radius: 15px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.4);
-      max-width: 800px;
-      color: #ffe600;
-      font-size: 1.1em;
-    }
-    .visa-info a {
-      color: #fff700;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-    .map-visual {
-      background: rgba(0,0,0,0.7);
-      max-width: 800px;
-      margin: 32px auto 0 auto;
-      padding: 18px 14px 22px 14px;
-      border-radius: 18px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.4);
-      text-align: center;
-    }
-    .map-visual h2 {
-      color: #ffe600;
-      margin-top: 0;
-    }
-    .map-visual iframe {
-      width: 100%;
-      height: 380px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
-      margin-top: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 400px;
-      margin: 0 auto;
-      gap: 10px;
-    }
-    input, textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      font-size: 1rem;
-    }
-    input::placeholder, textarea::placeholder {
-      color: #eee;
-      opacity: 1;
-    }
-    button {
-      padding: 12px;
-      background-color: #ffe600;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      color: #222;
-      transition: background 0.2s;
-    }
-    button:hover {
-      background-color: #fff700;
-    }
     @media (max-width: 900px) {
-      .regions, .top-destinations, .experiences {
+      .destinations, .experiences, .golf-tours {
         flex-direction: column;
         align-items: center;
         gap: 16px;
@@ -170,12 +104,6 @@
       .card {
         width: 96vw;
         max-width: 400px;
-      }
-      .visa-info, .map-visual {
-        padding: 16px 6px 12px 6px;
-      }
-      .map-visual iframe {
-        height: 240px;
       }
     }
   </style>
@@ -192,6 +120,106 @@
     <p>Explore, eat, party, and connect like a local. Our tours are personal, powerful, and unforgettable.</p>
   </section>
 
+  <section class="best-time">
+    <h2>Best Time to Visit Vietnam</h2>
+    <p><strong>Spring (March–May)</strong> and <strong>Autumn (September–November)</strong> offer the best weather across most of Vietnam, with pleasant temperatures and less rain. The north is cool and dry, the south is warm and sunny, and the central coast is beautiful year-round.</p>
+  </section>
+
+  <section class="festivals">
+    <h2>Top Festivals in Vietnam</h2>
+    <ul>
+      <li><strong>Tet (Lunar New Year):</strong> Vietnam’s biggest celebration, usually in late January or February. Streets come alive with flowers, food, and fireworks.</li>
+      <li><strong>Mid-Autumn Festival:</strong> Lantern parades and mooncakes in September or October, especially magical for families and children.</li>
+      <li><strong>Hue Festival:</strong> Biennial cultural festival in Hue with music, art, and traditional performances.</li>
+      <li><strong>Hoi An Lantern Festival:</strong> Monthly, on the full moon, the old town glows with thousands of lanterns.</li>
+    </ul>
+  </section>
+
+  <section class="destinations">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Phu Quoc Island beach sunset" />
+      <h3>Phu Quoc Island</h3>
+      <p>Asia’s top beach escape. White sand beaches, turquoise waters, vibrant night markets, and world-class snorkeling and scuba diving.</p>
+      <ul>
+        <li>Snorkeling & diving at An Thoi archipelago</li>
+        <li>Phu Quoc National Park</li>
+        <li>Fresh seafood & night markets</li>
+        <li>Kayaking, island hopping, and more</li>
+      </ul>
+      <div class="links">
+        <a href="phu-quoc.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a Phu Quoc tour" target="_blank">Book Tour</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Ha Long Bay limestone cliffs" />
+      <h3>Ha Long Bay</h3>
+      <p>UNESCO World Heritage site. Dramatic limestone cliffs, emerald waters, overnight cruises, and hidden caves.</p>
+      <ul>
+        <li>Overnight boat cruises</li>
+        <li>Kayaking & swimming</li>
+        <li>Visit Sung Sot Cave & Ti Top Island</li>
+        <li>Photography & sunset views</li>
+      </ul>
+      <div class="links">
+        <a href="ha-long-bay.html">More Info</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a Ha Long Bay tour" target="_blank">Book Tour</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Ho Chi Minh City skyline at night" />
+      <h3>Ho Chi Minh City</h3>
+      <p>Vietnam’s vibrant southern hub. Bustling markets, French colonial architecture, rooftop bars, and incredible street food.</p>
+      <ul>
+        <li>Ben Thanh Market & War Remnants Museum</li>
+        <li>Notre-Dame Cathedral Basilica of Saigon</li>
+        <li>Cu Chi Tunnels day trip</li>
+        <li>Nightlife & rooftop bars</li>
+      </ul>
+      <div class="links">
+        <a href="south-vietnam.html">More Info</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="experiences">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Scuba diving in Vietnam" />
+      <h3>Scuba Diving</h3>
+      <p>Discover vibrant coral reefs and marine life in Phu Quoc, Nha Trang, and Con Dao. Perfect for beginners and experienced divers.</p>
+      <ul>
+        <li>Guided dive tours & PADI courses</li>
+        <li>Snorkeling for all ages</li>
+        <li>Wreck diving & night dives</li>
+      </ul>
+      <div class="links">
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a scuba diving tour" target="_blank">Book Diving</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Boat party in Vietnam" />
+      <h3>Boat Braais</h3>
+      <p>BBQ, beers, islands, and music. Perfect for groups and parties!</p>
+      <div class="links">
+        <a href="boat-braai-tours.html">Learn More</a>
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a boat braai tour" target="_blank">Book</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Golf course in Vietnam" />
+      <h3>Golf Tours</h3>
+      <p>Play at award-winning golf courses in Da Nang, Ho Chi Minh City, and Hanoi. Scenic fairways, world-class facilities, and tropical views.</p>
+      <ul>
+        <li>Ba Na Hills Golf Club (Da Nang) – World Golf Awards winner</li>
+        <li>Laguna Golf Lang Co (Hue) – Top 100 Golf Courses in Asia</li>
+        <li>Tan Son Nhat Golf Course (HCMC) – Modern city golf</li>
+      </ul>
+      <div class="links">
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a golf tour" target="_blank">Book Golf Tour</a>
+      </div>
+    </div>
+  </section>
+
   <section class="visa-info">
     <h2>Visa & Travel Info</h2>
     <p>
@@ -206,125 +234,6 @@
     <p>Always check the latest official info and requirements before booking. <a href="visa-travel-tips.html">More visa tips</a></p>
   </section>
 
-  <section class="regions">
-    <div class="card">
-      <h3>North Vietnam</h3>
-      <p>Hanoi, Sapa, Ha Long Bay, and the world’s largest cave.</p>
-      <div class="links">
-        <a href="north-vietnam.html">More Info</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Central Vietnam</h3>
-      <p>Da Nang, Hoi An, Hue, and the stunning coastline.</p>
-      <div class="links">
-        <a href="central-vietnam.html">More Info</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>South Vietnam</h3>
-      <p>Ho Chi Minh City, Mekong Delta, and Phu Quoc Island.</p>
-      <div class="links">
-        <a href="south-vietnam.html">More Info</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="top-destinations">
-    <div class="card">
-      <h3>Phu Quoc Island</h3>
-      <p>Voted one of Asia’s top beach escapes. Great food, nightlife, and boat tours.</p>
-      <div class="links">
-        <a href="phu-quoc.html">More Info</a>
-        <a class="book" href="https://wa.me/27794720078?text=I want to book a Phu Quoc tour" target="_blank">Book Tour</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Da Nang</h3>
-      <p>Surf, hike, and eat in Vietnam’s cleanest and most livable city.</p>
-      <div class="links">
-        <a href="danang.html">More Info</a>
-        <a class="book" href="https://wa.me/27794720078?text=I want to book a Da Nang tour" target="_blank">Book Tour</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Ha Long Bay</h3>
-      <p>World heritage site. Limestone cliffs, overnight cruises, and hidden coves.</p>
-      <div class="links">
-        <a href="ha-long-bay.html">More Info</a>
-        <a class="book" href="https://wa.me/27794720078?text=I want to book a Ha Long Bay tour" target="_blank">Book Tour</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Son Doong Cave</h3>
-      <p>The largest cave in the world. A must-see for true explorers.</p>
-      <div class="links">
-        <a href="son-doong.html">More Info</a>
-        <a class="book" href="https://wa.me/27794720078?text=I want to book a cave adventure" target="_blank">Book Tour</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3 class="subtitle">New!</h3>
-      <h3>Dalat Mountains</h3>
-      <p>Cool pine forests, flower farms, coffee plantations, and epic mountain views. Trek, relax, or adventure!</p>
-      <div class="links">
-        <a href="dalat.html">More Info</a>
-        <a class="book" href="https://wa.me/27794720078?text=I want to see the Dalat mountains" target="_blank">Book Dalat Tour</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3 class="subtitle">Hidden Gem</h3>
-      <h3>Daklak Waterfalls</h3>
-      <p>Spectacular jungle waterfalls and untamed highlands. Ideal for off-the-beaten-track adventurers.</p>
-      <div class="links">
-        <a href="daklak-waterfalls.html">More Info</a>
-        <a class="book" href="https://wa.me/27794720078?text=I want a Daklak waterfall tour" target="_blank">Book Daklak Adventure</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="experiences">
-    <div class="card">
-      <h3>Boat Braais</h3>
-      <p>BBQ + beers + islands + music. Perfect for groups and parties!</p>
-      <div class="links">
-        <a href="boat-braai-tours.html">Learn More</a>
-        <a class="book" href="https://wa.me/27794720078?text=I want to book a boat braai tour" target="_blank">Book</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Secret Waterfalls</h3>
-      <p>Jungle treks to magical falls only locals know.</p>
-      <div class="links">
-        <a class="book" href="https://wa.me/27794720078?text=I want a secret waterfall tour" target="_blank">Book</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Surfing Lessons</h3>
-      <p>Catch a wave in Da Nang or Mui Ne with local instructors.</p>
-      <div class="links">
-        <a class="book" href="https://wa.me/27794720078?text=I want surf lessons" target="_blank">Book</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Bike Across Vietnam</h3>
-      <p>Rent bikes for epic solo or guided cross-country trips.</p>
-      <div class="links">
-        <a class="book" href="https://wa.me/27794720078?text=I want to rent a bike and ride Vietnam!" target="_blank">Start Trip</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="intro">
-    <h2>Booking & Inquiries</h2>
-    <form name="booking-form" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <textarea name="message" rows="4" placeholder="Which tour or info are you interested in?" required></textarea>
-      <button type="submit">Send Booking Inquiry</button>
-    </form>
-  </section>
-
   <section class="map-visual">
     <h2>Vietnam on the Map</h2>
     <iframe 
@@ -334,6 +243,16 @@
     <p style="margin-top:10px;">
       <a href="https://maps.google.com?q=vietnam" target="_blank" style="color:#ffe600;">Open Vietnam in Google Maps</a>
     </p>
+  </section>
+
+  <section class="intro">
+    <h2>Booking & Inquiries</h2>
+    <form name="booking-form" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your name" required aria-label="Your name" />
+      <input type="email" name="email" placeholder="Your email" required aria-label="Your email" />
+      <textarea name="message" rows="4" placeholder="Which tour or info are you interested in?" required aria-label="Your message"></textarea>
+      <button type="submit">Send Booking Inquiry</button>
+    </form>
   </section>
 
   <footer>
