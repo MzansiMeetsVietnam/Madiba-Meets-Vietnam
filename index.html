@@ -109,15 +109,37 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Madiba Meets Vietnam</h1>
-    <p>Authentic tours, hidden gems, and unforgettable adventures</p>
+  <header style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; background-size: cover; background-position: center; padding-bottom: 0;">
+    <nav style="display: flex; justify-content: center; align-items: center; gap: 2rem; padding: 10px 0 0 0;">
+      <div style="position: relative;">
+        <button style="background: #ffe600; color: #222; border: none; border-radius: 6px 6px 0 0; padding: 10px 18px; font-weight: bold; cursor: pointer;">North</button>
+        <div style="display: none; position: absolute; left: 0; top: 100%; background: #fff; color: #222; border-radius: 0 0 6px 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 160px; z-index: 10;">
+          <a href="#halong" style="display:block; padding:10px 18px; text-decoration:none; color:#222;">Ha Long Bay</a>
+          <a href="#hanoi" style="display:block; padding:10px 18px; text-decoration:none; color:#222;">Hanoi</a>
+        </div>
+      </div>
+      <div style="position: relative;">
+        <button style="background: #ffe600; color: #222; border: none; border-radius: 6px 6px 0 0; padding: 10px 18px; font-weight: bold; cursor: pointer;">Central</button>
+        <div style="display: none; position: absolute; left: 0; top: 100%; background: #fff; color: #222; border-radius: 0 0 6px 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 160px; z-index: 10;">
+          <a href="#danang" style="display:block; padding:10px 18px; text-decoration:none; color:#222;">Da Nang</a>
+          <a href="#nhatrang" style="display:block; padding:10px 18px; text-decoration:none; color:#222;">Nha Trang</a>
+        </div>
+      </div>
+      <div style="position: relative;">
+        <button style="background: #ffe600; color: #222; border: none; border-radius: 6px 6px 0 0; padding: 10px 18px; font-weight: bold; cursor: pointer;">South</button>
+        <div style="display: none; position: absolute; left: 0; top: 100%; background: #fff; color: #222; border-radius: 0 0 6px 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 160px; z-index: 10;">
+          <a href="#phuquoc" style="display:block; padding:10px 18px; text-decoration:none; color:#222;">Phu Quoc</a>
+          <a href="#hcmc" style="display:block; padding:10px 18px; text-decoration:none; color:#222;">Ho Chi Minh City</a>
+        </div>
+      </div>
+    </nav>
+    <h1 style="margin-top: 0.5em;">Madiba Meets Vietnam</h1>
+    <p style="font-size:1.2em;">Authentic tours, hidden gems, and unforgettable adventures</p>
   </header>
 
   <section class="intro">
-    <h2>From Zululand to Vietnam</h2>
-    <p>I'm a farm boy from Zululand who lived and traveled across Vietnam for 8 years. Now I’m sharing the most breathtaking places and off-the-beaten-path experiences with fellow adventurers like you.</p>
-    <p>Explore, eat, party, and connect like a local. Our tours are personal, powerful, and unforgettable.</p>
+    <h2>Our Mission</h2>
+    <p>Having been born and bred in Zululand and having had adventure in Vietnam for 8 years, I have plenty of hidden gems to share. My goal is to connect you with the real Vietnam—its people, food, and wild beauty—through authentic, unforgettable experiences.</p>
   </section>
 
   <section class="best-time">
@@ -143,8 +165,8 @@
   </section>
 
   <section class="destinations">
-    <div class="card">
-      <img src="https://lp-cms-production.imgix.net/2023-06/shutterstockRF_1194060107.jpg?auto=format,compress&q=72&fit=crop&w=800&q=80" alt="Phu Quoc Island turquoise beach" />
+    <div class="card" id="phuquoc">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Phu Quoc Island turquoise beach" />
       <h3>Phu Quoc Island</h3>
       <p>Asia’s top beach escape. White sand beaches, turquoise waters, vibrant night markets, and world-class snorkeling and scuba diving.</p>
       <ul>
@@ -159,8 +181,8 @@
         <a class="book" href="https://wa.me/27794720078?text=I want to book a Phu Quoc tour" target="_blank">Book Tour</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Halong_Bay_in_Vietnam.jpg" alt="Ha Long Bay limestone cliffs" />
+    <div class="card" id="halong">
+      <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Ha Long Bay limestone cliffs" />
       <h3>Ha Long Bay</h3>
       <p>UNESCO World Heritage site. Dramatic limestone cliffs, emerald waters, overnight cruises, and hidden caves.</p>
       <ul>
@@ -174,8 +196,8 @@
         <a class="book" href="https://wa.me/27794720078?text=I want to book a Ha Long Bay tour" target="_blank">Book Tour</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://lp-cms-production.imgix.net/2019-06/ab4a79b04c7c96508ea77aec7073e7d3-ho-chi-minh-city.jpg?auto=format,compress&q=72&w=1095&fit=crop&crop=faces,edges" alt="Ho Chi Minh City skyline" />
+    <div class="card" id="hcmc">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Ho Chi Minh City skyline" />
       <h3>Ho Chi Minh City</h3>
       <p>Vietnam’s vibrant southern hub. Bustling markets, French colonial architecture, rooftop bars, and incredible street food.</p>
       <ul>
@@ -188,8 +210,8 @@
         <a href="south-vietnam.html">More Info</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Nha_Trang_beach%2C_Vietnam.jpg" alt="Nha Trang beach" />
+    <div class="card" id="nhatrang">
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Nha Trang beach" />
       <h3>Nha Trang</h3>
       <p>Vietnam’s premier beach city. Famous for its long sandy coastline, vibrant nightlife, and excellent island hopping tours.</p>
       <ul>
@@ -230,17 +252,41 @@
     <div class="card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Ba_Na_Hills_Golf_Club%2C_Da_Nang.jpg" alt="Ba Na Hills Golf Club, Da Nang" />
       <h3>Golf Tours</h3>
-      <p>Play at award-winning golf courses in Da Nang, Ho Chi Minh City, and Hanoi. Scenic fairways, world-class facilities, and tropical views.</p>
+      <p>Play at award-winning golf courses in Da Nang, Ho Chi Minh City, Hanoi, and Phu Quoc. Scenic fairways, world-class facilities, and tropical views.</p>
       <ul>
         <li>Ba Na Hills Golf Club (Da Nang) – <a href="https://worldgolfawards.com/award/vietnam-best-golf-course/2023" target="_blank">World Golf Awards winner</a></li>
         <li>Laguna Golf Lang Co (Hue) – <a href="https://www.golfdigest.com/story/best-golf-courses-vietnam" target="_blank">Top 100 Golf Courses in Asia (Golf Digest)</a></li>
         <li>Tan Son Nhat Golf Course (HCMC) – Modern city golf</li>
+        <li>Vinpearl Golf Phu Quoc – <a href="https://www.vinpearl.com/en/vinpearl-golf-phu-quoc/" target="_blank">Award-winning island golf</a></li>
       </ul>
-      <!-- Sources: https://worldgolfawards.com/award/vietnam-best-golf-course/2023, https://www.golfdigest.com/story/best-golf-courses-vietnam -->
+      <!-- Sources: https://worldgolfawards.com/award/vietnam-best-golf-course/2023, https://www.golfdigest.com/story/best-golf-courses-vietnam, https://www.vinpearl.com/en/vinpearl-golf-phu-quoc/ -->
       <div class="links">
         <a class="book" href="https://wa.me/27794720078?text=I want to book a golf tour" target="_blank">Book Golf Tour</a>
       </div>
     </div>
+  </section>
+  <section class="intro" style="background: rgba(0,0,0,0.7);">
+    <h2>Best Street Food Dishes & Spots</h2>
+    <ul>
+      <li><strong>Banh Mi (Vietnamese Baguette Sandwich):</strong> Try <a href="https://www.lonelyplanet.com/vietnam/ho-chi-minh-city/restaurants/banh-mi-huynh-hoa/a/poi-eat/1377262/357640" target="_blank">Banh Mi Huynh Hoa, HCMC</a></li>
+      <li><strong>Pho (Noodle Soup):</strong> <a href="https://www.lonelyplanet.com/vietnam/hanoi/restaurants/pho-gia-truyen/a/poi-eat/1377262/357640" target="_blank">Pho Gia Truyen, Hanoi</a></li>
+      <li><strong>Bun Cha (Grilled Pork with Noodles):</strong> <a href="https://www.lonelyplanet.com/vietnam/hanoi/restaurants/bun-cha-huong-lien/a/poi-eat/1377262/357640" target="_blank">Bun Cha Huong Lien, Hanoi</a></li>
+      <li><strong>Seafood BBQ:</strong> <a href="https://www.vietnam-guide.com/food/seafood-restaurants.htm" target="_blank">Seafood restaurants in Nha Trang</a></li>
+      <li><strong>Goi Cuon (Fresh Spring Rolls):</strong> <a href="https://www.lonelyplanet.com/vietnam/ho-chi-minh-city/restaurants/quan-an-ngon/a/poi-eat/1377262/357640" target="_blank">Quan An Ngon, HCMC</a></li>
+    </ul>
+    <p>More: <a href="https://www.lonelyplanet.com/vietnam/restaurants" target="_blank">Lonely Planet: Best places to eat in Vietnam</a></p>
+  </section>
+
+  <section class="intro" style="background: rgba(0,0,0,0.7);">
+    <h2>Western Restaurants in Vietnam</h2>
+    <ul>
+      <li><strong>Pizza 4P's:</strong> <a href="https://pizza4ps.com/" target="_blank">Pizza 4P's (HCMC, Hanoi, Danang, Nha Trang)</a> – Japanese-Italian fusion, famous for cheese made in-house.</li>
+      <li><strong>El Gaucho Steakhouse:</strong> <a href="https://elgaucho.asia/" target="_blank">El Gaucho (HCMC, Hanoi, Danang)</a> – Argentinian steakhouse, top-rated for Western dining.</li>
+      <li><strong>La Villa French Restaurant:</strong> <a href="https://www.lavilla-restaurant.com.vn/" target="_blank">La Villa (HCMC)</a> – Fine French cuisine in a colonial villa.</li>
+      <li><strong>Skewers Restaurant:</strong> <a href="https://skewers-restaurant.com/" target="_blank">Skewers (HCMC)</a> – Mediterranean grill, popular with expats.</li>
+      <li><strong>Louisiane Brewhouse:</strong> <a href="https://www.louisianebrewhouse.com.vn/" target="_blank">Louisiane Brewhouse (Nha Trang)</a> – Craft beer and Western food on the beach.</li>
+    </ul>
+    <p>More: <a href="https://www.tripadvisor.com/Restaurants-g293921-c8-Vietnam.html" target="_blank">TripAdvisor: Best Western Restaurants in Vietnam</a></p>
   </section>
 
   <section class="visa-info">
@@ -271,10 +317,10 @@
   <section class="intro">
     <h2>Booking & Inquiries</h2>
     <form name="booking-form" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your name" required aria-label="Your name" />
-      <input type="email" name="email" placeholder="Your email" required aria-label="Your email" />
-      <textarea name="message" rows="4" placeholder="Which tour or info are you interested in?" required aria-label="Your message"></textarea>
-      <button type="submit">Send Booking Inquiry</button>
+      <input type="text" name="name" placeholder="Your Name" required style="padding: 0.75rem; border-radius: 6px; border: 1px solid #006400; font-size: 1rem;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding: 0.75rem; border-radius: 6px; border: 1px solid #006400; font-size: 1rem;">
+      <textarea name="message" rows="4" placeholder="Which tour or info are you interested in?" required style="padding: 0.75rem; border-radius: 6px; border: 1px solid #FFD700; font-size: 1rem;"></textarea>
+      <button type="submit" style="padding: 0.75rem 1.5rem; background: linear-gradient(90deg, #006400 60%, #FFD700 100%); color: #fff; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: background 0.2s;">Send Booking Inquiry</button>
     </form>
   </section>
 
