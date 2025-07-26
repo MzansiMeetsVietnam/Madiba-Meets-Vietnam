@@ -1,95 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Madiba Meets Mekong</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 text-gray-900">
+<!-- Destination Cards -->
+<section class="py-10 px-4 max-w-7xl mx-auto">
+  <h2 class="text-2xl font-bold text-center mb-8">Top Destinations</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-  <!-- Header -->
-  <header class="bg-green-800 text-white py-6 shadow-md">
-    <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold">Madiba Meets Mekong</h1>
-      <p class="text-lg">One-week tours from $400 – Discover Vietnam’s hidden gems!</p>
-    </div>
-  </header>
-
-  <!-- Hero Image with Map -->
-  <section class="relative h-[400px]">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Vietnam_regions_map.png" alt="Vietnam Map" class="w-full h-full object-cover opacity-80">
-    <div class="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-40">
-      <h2 class="text-4xl font-bold mb-4">Explore Vietnam by Region</h2>
-      <div class="flex gap-4">
-        <a href="south-vietnam.html" class="bg-green-700 px-4 py-2 rounded hover:bg-green-600">South Vietnam</a>
-        <a href="central-vietnam.html" class="bg-green-700 px-4 py-2 rounded hover:bg-green-600">Central Vietnam</a>
-        <a href="north-vietnam.html" class="bg-green-700 px-4 py-2 rounded hover:bg-green-600">North Vietnam</a>
-      </div>
-      <a href="https://www.google.com/maps/place/Vietnam" target="_blank" class="mt-4 underline text-sm">View on Google Maps</a>
-    </div>
-  </section>
-
-  <!-- Destinations Section -->
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Top Destinations</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        
-        <!-- Dalat -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1528790574193-5bcbd594f4c2?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Dalat">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Dalat</h3>
-            <p class="text-sm text-gray-600">Cool mountains, waterfalls, and flowers galore.</p>
-            <a href="dalat.html" class="text-green-700 hover:underline block mt-2">Explore Dalat</a>
-          </div>
-        </div>
-
-        <!-- Nha Trang -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1580795470337-b7d33cc3d9a9?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Nha Trang">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Nha Trang</h3>
-            <p class="text-sm text-gray-600">Beach life, boat tours & seafood braais.</p>
-            <a href="nha-trang.html" class="text-green-700 hover:underline block mt-2">Explore Nha Trang</a>
-          </div>
-        </div>
-
-        <!-- HCMC -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1617191517306-9e569b2df77c?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="HCMC">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Ho Chi Minh City</h3>
-            <p class="text-sm text-gray-600">Bustling streets, war history, rooftop bars.</p>
-            <a href="hcmc.html" class="text-green-700 hover:underline block mt-2">Explore HCMC</a>
-          </div>
-        </div>
-
-        <!-- Phu Quoc -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1627634842627-0d51e92e9423?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Phu Quoc">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Phu Quoc</h3>
-            <p class="text-sm text-gray-600">Island paradise, clear water, private boat tours.</p>
-            <a href="phu-quoc.html" class="text-green-700 hover:underline block mt-2">Explore Phu Quoc</a>
-          </div>
-        </div>
-
-        <!-- Add more destination blocks here later... -->
-
+    <!-- Phu Quoc -->
+    <div class="bg-white rounded-xl shadow hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1627634842627-0d51e92e9423?auto=format&fit=crop&w=800&q=80"
+           class="w-full h-48 object-cover rounded-t-xl" alt="Phu Quoc">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Phu Quoc</h3>
+        <p class="text-sm text-gray-600">Private speedboats, secret islands, and beach braais.</p>
+        <a href="phu-quoc.html" class="text-green-700 hover:underline mt-2 block">Explore Phu Quoc</a>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-green-800 text-white py-6">
-    <div class="container mx-auto px-4 text-center">
-      <p>Contact us at <a href="mailto:hughboynewlands@gmail.com" class="underline">hughboynewlands@gmail.com</a></p>
-      <p>Or message us directly on <a href="https://wa.me/27794720078" class="underline">WhatsApp</a></p>
-      <p class="mt-2 text-sm">© 2025 Madiba Meets Mekong. All rights reserved.</p>
+    <!-- Da Nang -->
+    <div class="bg-white rounded-xl shadow hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=800&q=80"
+           class="w-full h-48 object-cover rounded-t-xl" alt="Da Nang">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Da Nang</h3>
+        <p class="text-sm text-gray-600">Golden Bridge, beaches, and gateway to Hoi An.</p>
+        <a href="da-nang.html" class="text-green-700 hover:underline mt-2 block">Explore Da Nang</a>
+      </div>
     </div>
-  </footer>
 
-</body>
-</html>
+    <!-- Ha Long Bay -->
+    <div class="bg-white rounded-xl shadow hover:shadow-xl transition">
+      <img src="https://images.unsplash.com/photo-1609758463839-bd376d1ac49a?auto=format&fit=crop&w=800&q=80"
+           class="w-full h-48 object-cover rounded-t-xl" alt="Ha Long Bay">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Ha Long Bay</h3>
+        <p class="text-sm text-gray-600">Magical limestone islands and overnight cruises.</p>
+        <a href="ha-long-bay.html" class="text-green-700 hover:underline mt-2 block">Explore Ha Long Bay</a>
+      </div>
+    </div>
+
+    <!-- Son Doong Cave -->
+    <div class="bg-white rounded-xl shadow hover:shadow-xl transition">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Son_Doong_Cave_2019.jpg/1280px-Son_Doong_Cave_2019.jpg"
+           class="w-full h-48 object-cover rounded-t-xl" alt="Son Doong Cave">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Son Doong Cave</h3>
+        <p class="text-sm text-gray-600">The world's largest cave – a once-in-a-lifetime expedition.</p>
+        <a href="son-doong-cave.html" class="text-green-700 hover:underline mt-2 block">Explore Son Doong</a>
+      </div>
+    </div>
+
+  </div>
+</section>
