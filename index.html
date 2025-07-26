@@ -5,67 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Madiba Meets Vietnam</title>
   <meta name="description" content="Authentic tours, hidden gems, and unforgettable adventures in Vietnam. Explore Phu Quoc Island, Ha Long Bay, Ho Chi Minh City, scuba diving, golf tours, and more." />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       color: #222;
       min-height: 100vh;
-      background: linear-gradient(135deg, #006400 60%, #FFD700 100%);
+      background: linear-gradient(135deg, #f8f6f1 60%, #e6c200 100%);
       background-attachment: fixed;
     }
-    .bg1 { background: linear-gradient(rgba(0,100,0,0.7), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
-    .bg2 { background: linear-gradient(rgba(255,215,0,0.7), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
-    .bg3 { background: linear-gradient(rgba(0,100,0,0.7), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
-    .bg4 { background: linear-gradient(rgba(255,215,0,0.7), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
+    .bg1 { background: linear-gradient(rgba(191,161,74,0.7), rgba(0,51,102,0.6)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
+    .bg2 { background: linear-gradient(rgba(255,255,255,0.85), rgba(230,194,0,0.15)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
+    .bg3 { background: linear-gradient(rgba(0,51,102,0.7), rgba(191,161,74,0.3)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
+    .bg4 { background: linear-gradient(rgba(191,161,74,0.7), rgba(0,51,102,0.6)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; }
     header {
-      background: var(--header-bg, #FFD700);
-      padding: 20px;
+      background: linear-gradient(90deg, #fffbe6 60%, #e6c200 100%);
+      border-bottom: 2px solid #bfa14a;
+      padding: 28px 0 18px 0;
       text-align: center;
+      box-shadow: 0 2px 16px #bfa14a22;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 3.1rem;
       margin: 0;
-      color: #006400;
-      text-shadow: 0 2px 8px #FFD700;
+      color: #bfa14a;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 0 2px 16px #fffbe6, 0 2px 8px #003366;
+      letter-spacing: 2px;
     }
     h2, h3 {
-      text-shadow: 0 1px 6px #FFD700;
-      color: #006400;
+      text-shadow: 0 1px 8px #fffbe6, 0 1px 4px #bfa14a;
+      color: #003366;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
     }
     .intro, .visa-info, .map-visual, .best-time, .festivals {
-      padding: 20px;
-      background: rgba(255, 215, 0, 0.7);
-      max-width: 900px;
-      margin: 30px auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 24px rgba(0,100,0,0.15);
+      padding: 28px;
+      background: rgba(255,255,255,0.92);
+      max-width: 950px;
+      margin: 36px auto;
+      border-radius: 22px;
+      box-shadow: 0 8px 36px #bfa14a22;
+      border: 1.5px solid #e6c200;
     }
     .destinations, .experiences, .golf-tours {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 24px;
-      padding: 40px 20px;
+      gap: 32px;
+      padding: 48px 24px;
     }
     .card {
-      background: rgba(0,100,0,0.12);
-      border: 2px solid #FFD700;
-      border-radius: 12px;
-      width: 320px;
-      padding: 20px;
+      background: rgba(255,255,255,0.97);
+      border: 2px solid #bfa14a;
+      border-radius: 18px;
+      width: 340px;
+      padding: 26px 18px 22px 18px;
       text-align: center;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 2px 18px rgba(0,100,0,0.12);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 2px 18px #bfa14a22;
+      margin-bottom: 12px;
     }
     .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 12px;
       margin-bottom: 12px;
-      border: 2px solid #FFD700;
+      border: 2px solid #bfa14a;
+      box-shadow: 0 2px 12px #bfa14a44;
     }
     .card .links {
       margin-top: 12px;
@@ -74,26 +83,27 @@
       gap: 6px;
     }
     .card a, a, .card .links a {
-      color: #FFD700 !important;
+      color: #bfa14a !important;
       text-decoration: none;
       font-weight: bold;
-      text-shadow: 0 1px 8px #006400;
+      text-shadow: 0 1px 8px #fffbe6;
       padding: 4px 0;
       transition: color 0.2s;
     }
     .card a.book {
       color: #fff !important;
-      background: linear-gradient(90deg, #006400 60%, #FFD700 100%);
-      border-radius: 4px;
+      background: linear-gradient(90deg, #bfa14a 60%, #003366 100%);
+      border-radius: 6px;
       font-weight: bold;
       margin: 2px 0 0 0;
-      padding: 6px 0;
+      padding: 8px 0;
       text-shadow: none;
       transition: background 0.2s, color 0.2s;
+      font-size: 1.08em;
     }
     .card a.book:hover {
-      background: #FFD700;
-      color: #006400 !important;
+      background: #003366;
+      color: #bfa14a !important;
     }
     .card .subtitle {
       font-size: 0.95em;
@@ -176,6 +186,8 @@
         <div class="dropdown-content">
           <a href="#danang">Da Nang</a>
           <a href="#nhatrang">Nha Trang</a>
+          <a href="#dalat">Da Lat Mountains</a>
+          <a href="#daklak">Dak Lak Waterfalls</a>
           <a href="#hue">Hue</a>
         </div>
       </div>
@@ -192,18 +204,6 @@
   </header>
 
   <section class="intro bg2" style="background: linear-gradient(rgba(255,215,0,0.85), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
-  <section class="intro bg3" id="bikerentals" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
-    <h2>Bike Rentals for Cross-Country Trips</h2>
-    <p>Vietnam is a dream for cross-country motorbike adventures. Rent a bike in any major city and explore the legendary Hai Van Pass, the Mekong Delta, or the entire length of the country from north to south.</p>
-    <ul>
-      <li>Popular routes: Hanoi to Ho Chi Minh City, the Ho Chi Minh Road, and the coastal route via Da Nang and Nha Trang</li>
-      <li>Recommended rental companies: <a href="https://www.tigitmotorbikes.com/" target="_blank">Tigit Motorbikes</a>, <a href="https://rentabikevn.com/" target="_blank">Rent A Bike Vietnam</a></li>
-      <li>One-way rentals available</li>
-      <li>Automatic, semi-automatic, and manual bikes</li>
-      <li>Helmets and gear provided</li>
-    </ul>
-    <p>Always check your license and insurance requirements before starting your journey!</p>
-  </section>
     <h2>Our Mission</h2>
     <p>Having been born and bred in Zululand and having had adventure in Vietnam for 8 years, I have plenty of hidden gems to share. My goal is to connect you with the real Vietnam—its people, food, and wild beauty—through authentic, unforgettable experiences.</p>
   </section>
@@ -278,6 +278,46 @@
     </div>
     <div class="card" id="nhatrang">
       <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80" alt="Nha Trang beach and islands" />
+      <h3>Nha Trang</h3>
+      <p>Vietnam’s premier beach city. Famous for its long sandy coastline, vibrant nightlife, and excellent island hopping tours.</p>
+      <ul>
+        <li>Island hopping tours to Hon Mun, Hon Tam, and secret islands</li>
+        <li>Speed boat & BBQ tours</li>
+        <li>Scuba diving and snorkeling</li>
+        <li>Thap Ba Hot Springs & mud baths</li>
+      </ul>
+      <div class="links">
+        <a href="nha-trang.html">More Info</a>
+      </div>
+    </div>
+    <div class="card" id="dalat">
+      <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Da Lat mountains" />
+      <h3>Da Lat Mountains</h3>
+      <p>Misty pine forests, cool climate, flower gardens, and French villas. Trekking, canyoning, and waterfalls in Vietnam’s romantic highlands.</p>
+      <ul>
+        <li>Langbiang Mountain trekking</li>
+        <li>Datanla & Elephant waterfalls</li>
+        <li>Flower gardens & French colonial villas</li>
+        <li>Strawberry farms & local coffee</li>
+      </ul>
+      <div class="links">
+        <a href="https://www.lonelyplanet.com/vietnam/da-lat" target="_blank">More Info</a>
+      </div>
+    </div>
+    <div class="card" id="daklak">
+      <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3fd9?auto=format&fit=crop&w=800&q=80" alt="Dak Lak waterfalls" />
+      <h3>Dak Lak Waterfalls</h3>
+      <p>Home to Vietnam’s most spectacular waterfalls and ethnic minority culture. Explore Dray Nur, Dray Sap, and Gia Long falls, and the wild jungles of the Central Highlands.</p>
+      <ul>
+        <li>Dray Nur & Dray Sap waterfalls</li>
+        <li>Ethnic village visits</li>
+        <li>Elephant rides & jungle treks</li>
+        <li>Buon Ma Thuot coffee tours</li>
+      </ul>
+      <div class="links">
+        <a href="https://www.vietnam-guide.com/dak-lak-province/" target="_blank">More Info</a>
+      </div>
+    </div>
     <div class="card" id="mekong">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Mekong_Delta_boats.jpg" alt="Mekong Delta river boats" />
       <h3>Mekong Delta</h3>
@@ -306,7 +346,33 @@
     </div>
   </section>
 
-  <section class="experiences bg3" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="experiences bg3" style="background: linear-gradient(rgba(0,51,102,0.85), rgba(0,184,148,0.7)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Jungle adventure in Vietnam" />
+      <h3>Jungle Adventures</h3>
+      <p>Explore the wild jungles of Vietnam on guided treks, wildlife spotting, and camping trips. Discover the biodiversity of Cat Tien, Bach Ma, and Phong Nha-Ke Bang National Parks.</p>
+      <ul>
+        <li>Guided jungle treks</li>
+        <li>Wildlife & bird watching</li>
+        <li>Camping & river kayaking</li>
+      </ul>
+      <div class="links">
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a jungle adventure" target="_blank">Book Jungle Adventure</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" alt="4x4 offroad Vietnam" />
+      <h3>4x4 Offroad Trips</h3>
+      <p>Take on Vietnam’s rugged terrain with thrilling 4x4 adventures. From the mountains of the north to the sand dunes of Mui Ne, experience the country off the beaten path.</p>
+      <ul>
+        <li>Mountain & jungle routes</li>
+        <li>Sand dunes & river crossings</li>
+        <li>Expert guides & support vehicles</li>
+      </ul>
+      <div class="links">
+        <a class="book" href="https://wa.me/27794720078?text=I want to book a 4x4 trip" target="_blank">Book 4x4 Trip</a>
+      </div>
+    </div>
     <div class="card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Scuba_diving_in_Vietnam.jpg" alt="Scuba diving in Vietnam" />
       <h3>Scuba Diving</h3>
@@ -370,21 +436,39 @@
     <p>More: <a href="https://www.tripadvisor.com/Restaurants-g293921-c8-Vietnam.html" target="_blank">TripAdvisor: Best Western Restaurants in Vietnam</a></p>
   </section>
 
-  <section class="visa-info bg1" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
-    <h2>Visa & Travel Info</h2>
-    <p>
-      <strong>Official E-visa site:</strong> 
-      <a href="https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt" target="_blank">Vietnam Government E-Visa Portal</a>
-    </p>
-    <ul>
-      <li><strong>North Vietnam:</strong> Most travelers arrive via Hanoi (Noi Bai Airport). Visa on arrival is available with e-visa. Note: Border crossings from China may have different rules.</li>
-      <li><strong>Central Vietnam:</strong> Da Nang & Hue accept e-visas at airports and land borders. Ideal for exploring central coast and mountains.</li>
-      <li><strong>South Vietnam:</strong> Ho Chi Minh City is the main gateway. E-visa accepted at Tan Son Nhat airport and main land crossings from Cambodia.</li>
-    </ul>
-    <p>Always check the latest official info and requirements before booking. <a href="visa-travel-tips.html">More visa tips</a></p>
+  <section class="visa-info bg1" style="background: linear-gradient(rgba(0,51,102,0.85), rgba(0,184,148,0.7)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; border: 2px solid #00b894; box-shadow: 0 4px 24px #00336655;">
+    <h2 style="color:#fff;">Visa & Travel Info</h2>
+    <div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:32px;">
+      <div style="flex:2; min-width:220px;">
+        <p><strong>Official E-visa site:</strong><br>
+        <a href="https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt" target="_blank" style="color:#00b894;">Vietnam Government E-Visa Portal</a></p>
+        <ul style="margin-top:0.5em;">
+          <li><strong>North Vietnam:</strong> Most travelers arrive via Hanoi (Noi Bai Airport). Visa on arrival is available with e-visa. Note: Border crossings from China may have different rules.</li>
+          <li><strong>Central Vietnam:</strong> Da Nang & Hue accept e-visas at airports and land borders. Ideal for exploring central coast and mountains.</li>
+          <li><strong>South Vietnam:</strong> Ho Chi Minh City is the main gateway. E-visa accepted at Tan Son Nhat airport and main land crossings from Cambodia.</li>
+        </ul>
+        <p style="margin-top:0.5em;">Always check the latest official info and requirements before booking. <a href="visa-travel-tips.html" style="color:#00b894;">More visa tips</a></p>
+      </div>
+      <div style="flex:1; min-width:180px; text-align:center;">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Vietnam visa stamp" style="width:100%; max-width:180px; border-radius:10px; box-shadow:0 2px 12px #00336644; margin-bottom:8px;"/>
+        <div style="color:#00b894; font-size:1.1em; font-weight:bold;">Travel Ready!</div>
+      </div>
+    </div>
   </section>
 
   <section class="map-visual bg3" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat;">
+  <section class="intro bg3" id="bikerentals" style="background: linear-gradient(rgba(0,100,0,0.85), rgba(255,215,0,0.7)), url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; margin-bottom:32px;">
+    <h2>Bike Rentals for Cross-Country Trips</h2>
+    <p>Vietnam is a dream for cross-country motorbike adventures. Rent a bike in any major city and explore the legendary Hai Van Pass, the Mekong Delta, or the entire length of the country from north to south.</p>
+    <ul>
+      <li>Popular routes: Hanoi to Ho Chi Minh City, the Ho Chi Minh Road, and the coastal route via Da Nang and Nha Trang</li>
+      <li>Recommended rental companies: <a href="https://www.tigitmotorbikes.com/" target="_blank">Tigit Motorbikes</a>, <a href="https://rentabikevn.com/" target="_blank">Rent A Bike Vietnam</a></li>
+      <li>One-way rentals available</li>
+      <li>Automatic, semi-automatic, and manual bikes</li>
+      <li>Helmets and gear provided</li>
+    </ul>
+    <p>Always check your license and insurance requirements before starting your journey!</p>
+  </section>
     <h2>Vietnam on the Map</h2>
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12624117.563607395!2d97.34380775000001!3d15.9266657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc2c2a5c1e1%3A0x5a6b6b6b6b6b6b6b!2sVietnam!5e0!3m2!1sen!2sza!4v1643120661480!5m2!1sen!2sza" 
@@ -405,9 +489,22 @@
     </form>
   </section>
 
-  <footer>
-    <p>🇿🇦 Madiba Meets Vietnam | ✉️ hughboynewlands@gmail.com | 📞 +27 79 472 0078</p>
-    <p><a href="visa-travel-tips.html" style="color: #ffe600;">Visa & Travel Info</a> | <a href="contact-booking.html" style="color: #ffe600;">Contact Us</a></p>
+  <section class="intro bg2" style="background: linear-gradient(rgba(255,255,255,0.95), rgba(0,184,148,0.15)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') center center / cover no-repeat; border: 2px solid #e6c200; box-shadow: 0 4px 24px #00336622; margin-bottom: 32px;">
+    <h2 style="color:#bfa14a;">TEFL Job Placement & Accommodation Assistance</h2>
+    <p style="font-size:1.15em; color:#003366;">Are you a native or fluent English speaker looking to teach in Vietnam? We offer job placement services and help you find safe, affordable accommodation in cities and towns across the country.</p>
+    <ul style="color:#003366;">
+      <li>TEFL job placement in schools, language centers, and kindergartens</li>
+      <li>Visa and work permit guidance</li>
+      <li>Assistance with finding apartments or shared housing</li>
+      <li>On-the-ground support and orientation</li>
+      <li>Connect with a community of teachers</li>
+    </ul>
+    <p style="margin-top:1em; color:#003366;">Contact us for more info: <a href="mailto:hughboynewlands@gmail.com" style="color:#bfa14a;">hughboynewlands@gmail.com</a> or WhatsApp <a href="https://wa.me/27794720078" style="color:#bfa14a;">+27 79 472 0078</a></p>
+  </section>
+  <footer style="background: #fffbe6; border-top: 2px solid #bfa14a; padding: 24px 0 12px 0; text-align: center; font-family: 'Playfair Display', serif; color: #003366;">
+    <p style="font-size:1.1em; margin-bottom: 0.5em;">🇿🇦 Madiba Meets Vietnam &nbsp;|&nbsp; ✉️ hughboynewlands@gmail.com &nbsp;|&nbsp; 📞 +27 79 472 0078</p>
+    <p style="margin-bottom:0.5em;"><a href="visa-travel-tips.html" style="color: #bfa14a; text-decoration:underline;">Visa & Travel Info</a> | <a href="contact-booking.html" style="color: #bfa14a; text-decoration:underline;">Contact Us</a></p>
+    <div style="font-size:0.95em; color:#bfa14a;">&copy; 2025 Madiba Meets Vietnam. All rights reserved.</div>
   </footer>
 </body>
 </html>
