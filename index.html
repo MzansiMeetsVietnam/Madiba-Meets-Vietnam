@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Vietnam with Madiba Meets Vietnam. Discover authentic experiences, from Phu Quoc beaches to Ha Long Bay cruises and Mekong Delta adventures.">
-  <meta name="keywords" content="Vietnam travel, Madiba Meets Vietnam, Phu Quoc, Ha Long Bay, Ho Chi Minh City, travel guide, Vietnam festivals">
+  <meta name="description" content="Experience authentic Vietnam with Madiba Meets Vietnam. Discover Phu Quoc’s beaches, Ha Long Bay’s cruises, Mekong Delta’s waterways, and thrilling tours. Where you get to meet Vietnam like no one else will.">
+  <meta name="keywords" content="Vietnam travel, Madiba Meets Vietnam, Phu Quoc, Ha Long Bay, Ho Chi Minh City, Mekong Delta, Vietnam festivals, adventure tours, Afro-fusion travel">
   <meta name="author" content="Madiba Meets Vietnam">
-  <title>Madiba Meets Vietnam - Authentic Travel Experiences</title>
+  <title>Madiba Meets Vietnam - Authentic Adventures Await</title>
   <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.10/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body>
   <div id="root"></div>
   <script type="text/babel">
     function NavBar() {
       return (
-        <nav className="bg-green-600 text-white p-4 sticky top-0 z-10 shadow-md">
+        <nav className="bg-green-700 text-white p-4 sticky top-0 z-20 shadow-lg">
           <div className="container mx-auto flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Madiba Meets Vietnam</h1>
-            <div className="space-x-4">
-              <a href="#home" className="hover:text-yellow-300">Home</a>
-              <a href="#destinations" className="hover:text-yellow-300">Destinations</a>
-              <a href="#festivals" className="hover:text-yellow-300">Festivals</a>
-              <a href="#activities" className="hover:text-yellow-300">Activities</a>
-              <a href="#food" className="hover:text-yellow-300">Food</a>
-              <a href="#travel-info" className="hover:text-yellow-300">Travel Info</a>
-              <a href="#contact" className="hover:text-yellow-300">Contact</a>
+            <h1 className="text-3xl font-extrabold tracking-tight">Madiba Meets Vietnam</h1>
+            <div className="space-x-6">
+              <a href="#home" className="hover:text-yellow-200 transition-colors">Home</a>
+              <a href="#destinations" className="hover:text-yellow-200 transition-colors">Destinations</a>
+              <a href="#festivals" className="hover:text-yellow-200 transition-colors">Festivals</a>
+              <a href="#activities" className="hover:text-yellow-200 transition-colors">Activities</a>
+              <a href="#food" className="hover:text-yellow-200 transition-colors">Food</a>
+              <a href="#travel-info" className="hover:text-yellow-200 transition-colors">Travel Info</a>
+              <a href="#contact" className="hover:text-yellow-200 transition-colors">Contact</a>
             </div>
           </div>
         </nav>
@@ -36,33 +37,40 @@
 
     function Section({ title, children, id }) {
       return (
-        <section id={id} className="py-8 px-4">
+        <section id={id} className="py-12 px-6">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-green-700 mb-4">{title}</h2>
+            <h2 className="text-4xl font-bold text-green-800 mb-6">{title}</h2>
             {children}
           </div>
         </section>
       );
     }
 
-    function Collapsible({ title, children, imageSrc, imageAlt }) {
+    function Collapsible({ title, children, imageSrc, imageAlt, imageSource, id }) {
       const [isOpen, setIsOpen] = React.useState(false);
       return (
-        <div className="mb-4">
+        <div id={id} className="mb-6 rounded-xl shadow-md overflow-hidden">
           <button
-            className="w-full text-left bg-green-100 p-4 rounded-lg hover:bg-green-200"
+            className="w-full text-left bg-green-50 p-6 hover:bg-green-100 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <h3 className="text-xl font-semibold">{title}</h3>
+            <h3 className="text-2xl font-semibold text-green-700">{title}</h3>
           </button>
           {isOpen && (
-            <div className="p-4 bg-gray-50 rounded-b-lg">
+            <div className="p-6 bg-white">
               {imageSrc && (
-                <img
-                  src={imageSrc}
-                  alt={imageAlt}
-                  className="w-full h-64 object-cover rounded-lg mb-4 transform hover:scale-105 transition-transform duration-300"
-                />
+                <div className="relative">
+                  <img
+                    src={imageSrc}
+                    alt={imageAlt}
+                    className="w-full h-96 object-cover rounded-lg mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
+                  />
+                  {imageSource && (
+                    <p className="text-sm text-gray-500 absolute bottom-2 right-2 bg-white bg-opacity-75 px-2 py-1 rounded">
+                      {imageSource}
+                    </p>
+                  )}
+                </div>
               )}
               {children}
             </div>
@@ -71,213 +79,359 @@
       );
     }
 
+    function Tour({ title, description, imageSrc, imageAlt, imageSource }) {
+      return (
+        <div className="mb-4">
+          <h4 className="text-lg font-semibold text-gray-700 mb-2">{title}</h4>
+          {imageSrc && (
+            <div className="relative">
+              <img
+                src={imageSrc}
+                alt={imageAlt}
+                className="w-full h-64 object-cover rounded-lg mb-4 shadow-md transform hover:scale-105 transition-transform duration-300"
+              />
+              {imageSource && (
+                <p className="text-xs text-gray-500 absolute bottom-2 right-2 bg-white bg-opacity-75 px-2 py-1 rounded">
+                  {imageSource}
+                </p>
+              )}
+            </div>
+          )}
+          <p className="text-gray-600">{description}</p>
+        </div>
+      );
+    }
+
+    function GoogleMap() {
+      React.useEffect(() => {
+        const map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: 16.0, lng: 108.0 },
+          zoom: 6,
+          styles: [
+            { featureType: 'all', stylers: [{ hue: '#15803d' }, { saturation: 20 }] },
+            { featureType: 'water', stylers: [{ color: '#4ade80' }] },
+          ],
+        });
+
+        const destinations = [
+          { name: 'Phu Quoc', lat: 10.2239, lng: 103.9572, section: 'phu-quoc' },
+          { name: 'Ha Long Bay', lat: 20.9101, lng: 107.1839, section: 'ha-long-bay' },
+          { name: 'Ho Chi Minh City', lat: 10.7769, lng: 106.7009, section: 'ho-chi-minh-city' },
+          { name: 'Nha Trang', lat: 12.2388, lng: 109.1967, section: 'nha-trang' },
+          { name: 'Da Lat', lat: 11.9404, lng: 108.4583, section: 'da-lat' },
+          { name: 'Dak Lak', lat: 12.7100, lng: 108.2378, section: 'dak-lak' },
+          { name: 'Mekong Delta', lat: 10.0480, lng: 105.7563, section: 'mekong-delta' },
+        ];
+
+        destinations.forEach(dest => {
+          const marker = new google.maps.Marker({
+            position: { lat: dest.lat, lng: dest.lng },
+            map: map,
+            title: dest.name,
+          });
+
+          marker.addListener('click', () => {
+            window.location.href = `#${dest.section}`;
+            document.getElementById(dest.section).querySelector('button').click();
+          });
+        });
+      }, []);
+
+      return (
+        <div id="map" className="w-full h-96 rounded-xl shadow-lg mb-6"></div>
+      );
+    }
+
     function App() {
       return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-gray-50">
           <NavBar />
-          <Section id="home" title="Welcome to Madiba Meets Vietnam">
-            <img
-              src="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/vietnam-overview.jpg"
-              alt="Vibrant Vietnam landscape with rice fields and karsts"
-              className="w-full h-80 object-cover rounded-lg mb-4 transform hover:scale-105 transition-transform duration-300"
-            />
-            <p className="text-lg mb-4">
-              Born in Zululand and seasoned by 8 years in Vietnam, I’m here to share the hidden gems of this incredible country. My mission is to connect you with the real Vietnam—its vibrant people, delicious food, and breathtaking landscapes—through authentic, unforgettable experiences.
+          <Section id="home" title="Meet the Founder">
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1528127269322-539801943592"
+                alt="Lush green rice fields and karst mountains under a vibrant sunset in Northern Vietnam, symbolizing the unique Vietnam experience"
+                className="w-full h-96 object-cover rounded-xl shadow-xl mb-6 transform hover:scale-105 transition-transform duration-300"
+              />
+              <p className="text-sm text-gray-500 absolute bottom-2 right-2 bg-white bg-opacity-75 px-2 py-1 rounded">
+                Photo by Luke Stackpoole on Unsplash
+              </p>
+            </div>
+            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+              Born in Zululand and enriched by 8 years in Vietnam, I’m here to unveil the hidden treasures of this vibrant country. Where you get to meet Vietnam like no one else will—through authentic experiences, warm people, mouthwatering cuisine, and breathtaking landscapes.
             </p>
+            <GoogleMap />
             <a
               href="#contact"
-              className="inline-block bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700"
+              className="inline-block bg-green-700 text-white py-3 px-6 rounded-lg hover:bg-green-800 transition-colors text-lg font-semibold"
             >
-              Contact Us
+              Get in Touch
             </a>
           </Section>
 
           <Section id="destinations" title="Top Destinations">
             <Collapsible
+              id="phu-quoc"
               title="Phu Quoc Island"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/phu-quoc.jpg"
-              imageAlt="White sand beaches of Phu Quoc Island with turquoise waters"
+              imageSrc="https://images.pexels.com/photos/3019308/pexels-photo-3019308.jpeg"
+              imageAlt="Pristine white sand beach of Bai Sao on Phu Quoc Island with turquoise waters and swaying palm trees"
+              imageSource="Photo by Quang Nguyen Vinh on Pexels"
             >
-              <p>Asia’s top beach escape with white sand beaches, turquoise waters, vibrant night markets, and world-class snorkeling and scuba diving.</p>
-              <ul className="list-disc pl-5">
+              <p className="text-lg text-gray-600 mb-4">Asia’s premier beach destination, boasting pristine white sands, crystal-clear waters, bustling night markets, and world-class snorkeling and diving.</p>
+              <ul className="list-disc pl-6 text-gray-600">
                 <li>Snorkeling & diving at An Thoi archipelago</li>
-                <li>Phu Quoc National Park</li>
-                <li>Fresh seafood & night markets</li>
-                <li>Island hopping tours: Secret island speed boat & BBQ tour</li>
-                <li>New Year’s beach festivals & fireworks</li>
+                <li>Phu Quoc National Park exploration</li>
+                <li>Fresh seafood feasts at night markets</li>
+                <li>Island hopping: Secret island speed boat & BBQ tour</li>
+                <li>New Year’s beach festivals with spectacular fireworks</li>
               </ul>
             </Collapsible>
             <Collapsible
+              id="ha-long-bay"
               title="Ha Long Bay"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/ha-long-bay.jpg"
-              imageAlt="Emerald waters and limestone cliffs of Ha Long Bay"
+              imageSrc="https://images.unsplash.com/photo-1504457047772-27faf1c00561"
+              imageAlt="Majestic limestone cliffs rising from emerald waters of Ha Long Bay during a serene sunset cruise"
+              imageSource="Photo by Matthew Bennett on Unsplash"
             >
-              <p>UNESCO World Heritage site with dramatic limestone cliffs, emerald waters, overnight cruises, and hidden caves.</p>
-              <ul className="list-disc pl-5">
-                <li>Overnight boat cruises</li>
-                <li>Kayaking & swimming</li>
-                <li>Visit Sung Sot Cave & Ti Top Island</li>
-                <li>Photography & sunset views</li>
+              <p className="text-lg text-gray-600 mb-4">A UNESCO World Heritage site with dramatic limestone cliffs, emerald waters, overnight cruises, and hidden caves.</p>
+              <ul className="list-disc pl-6 text-gray-600">
+                <li>Luxurious overnight boat cruises</li>
+                <li>Kayaking & swimming in serene waters</li>
+                <li>Exploring Sung Sot Cave & Ti Top Island</li>
+                <li>Stunning photography & sunset views</li>
               </ul>
             </Collapsible>
             <Collapsible
+              id="ho-chi-minh-city"
               title="Ho Chi Minh City"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/ho-chi-minh-city.jpg"
-              imageAlt="Vibrant Ho Chi Minh City skyline at night"
+              imageSrc="https://images.pexels.com/photos/3188006/pexels-photo-3188006.jpeg"
+              imageAlt="Vibrant Ho Chi Minh City skyline at night with illuminated skyscrapers and bustling streets"
+              imageSource="Photo by Tom Fisk on Pexels"
             >
-              <p>Vietnam’s vibrant southern hub with bustling markets, French colonial architecture, rooftop bars, and incredible street food.</p>
-              <ul className="list-disc pl-5">
+              <p className="text-lg text-gray-600 mb-4">Vietnam’s dynamic southern hub, featuring bustling markets, French colonial architecture, rooftop bars, and incredible street food.</p>
+              <ul className="list-disc pl-6 text-gray-600">
                 <li>Ben Thanh Market & War Remnants Museum</li>
                 <li>Notre-Dame Cathedral Basilica of Saigon</li>
-                <li>Cu Chi Tunnels day trip</li>
-                <li>Nightlife & rooftop bars</li>
+                <li>Cu Chi Tunnels historical day trip</li>
+                <li>Vibrant nightlife & rooftop bars</li>
               </ul>
             </Collapsible>
             <Collapsible
+              id="nha-trang"
               title="Nha Trang"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/nha-trang.jpg"
-              imageAlt="Sandy coastline and turquoise waters of Nha Trang"
+              imageSrc="https://images.pexels.com/photos/3188007/pexels-photo-3188007.jpeg"
+              imageAlt="Golden sandy coastline of Nha Trang with turquoise waters and vibrant beachfront at sunset"
+              imageSource="Photo by Tom Fisk on Pexels"
             >
-              <p>Vietnam’s premier beach city, famous for its long sandy coastline, vibrant nightlife, and excellent island hopping tours.</p>
-              <ul className="list-disc pl-5">
-                <li>Island hopping tours to Hon Mun, Hon Tam, and secret islands</li>
+              <p className="text-lg text-gray-600 mb-4">Vietnam’s premier beach city, renowned for its long sandy coastline, lively nightlife, and exceptional island hopping tours.</p>
+              <ul className="list-disc pl-6 text-gray-600">
+                <li>Island hopping to Hon Mun, Hon Tam, and secret islands</li>
                 <li>Speed boat & BBQ tours</li>
-                <li>Scuba diving and snorkeling</li>
-                <li>Thap Ba Hot Springs & mud baths</li>
+                <li>Scuba diving and snorkeling adventures</li>
+                <li>Thap Ba Hot Springs & rejuvenating mud baths</li>
               </ul>
             </Collapsible>
             <Collapsible
+              id="da-lat"
               title="Da Lat Mountains"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/da-lat.jpg"
-              imageAlt="Misty pine forests and waterfalls in Da Lat Mountains"
+              imageSrc="https://images.unsplash.com/photo-1589811671509-9f25fe73e0cd"
+              imageAlt="Misty Elephant Waterfall cascading through lush pine forests in Da Lat Mountains"
+              imageSource="Photo by Khanh Le on Unsplash"
             >
-              <p>Misty pine forests, cool climate, flower gardens, and French villas in Vietnam’s romantic highlands.</p>
-              <ul className="list-disc pl-5">
-                <li>Langbiang Mountain trekking</li>
+              <p className="text-lg text-gray-600 mb-4">Romantic highlands with misty pine forests, cool climate, flower gardens, and charming French villas.</p>
+              <ul className="list-disc pl-6 text-gray-600">
+                <li>Trekking on Langbiang Mountain</li>
                 <li>Datanla & Elephant waterfalls</li>
                 <li>Flower gardens & French colonial villas</li>
-                <li>Strawberry farms & local coffee</li>
+                <li>Strawberry farms & local coffee tasting</li>
               </ul>
             </Collapsible>
             <Collapsible
+              id="dak-lak"
               title="Dak Lak Waterfalls"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/dak-lak.jpg"
-              imageAlt="Spectacular Dray Nur waterfall in Dak Lak"
+              imageSrc="https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg"
+              imageAlt="Powerful Dray Nur waterfall surrounded by lush jungle and rocky cliffs in Dak Lak"
+              imageSource="Photo by Pixabay on Pexels"
             >
-              <p>Home to Vietnam’s most spectacular waterfalls and ethnic minority culture in the Central Highlands.</p>
-              <ul className="list-disc pl-5">
+              <p className="text-lg text-gray-600 mb-4">Home to Vietnam’s most spectacular waterfalls and rich ethnic minority culture in the Central Highlands.</p>
+              <ul className="list-disc pl-6 text-gray-600">
                 <li>Dray Nur & Dray Sap waterfalls</li>
-                <li>Ethnic village visits</li>
+                <li>Ethnic village cultural visits</li>
                 <li>Elephant rides & jungle treks</li>
-                <li>Buon Ma Thuot coffee tours</li>
+                <li>Buon Ma Thuot coffee plantation tours</li>
               </ul>
             </Collapsible>
             <Collapsible
+              id="mekong-delta"
               title="Mekong Delta"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/mekong-delta.jpg"
-              imageAlt="Lush waterways and floating markets of the Mekong Delta"
+              imageSrc="https://images.unsplash.com/photo-1590933149698-62f90ed634b7"
+              imageAlt="Vibrant Cai Rang floating market with colorful boats laden with fruits in the Mekong Delta"
+              imageSource="Photo by Tom Fisk on Unsplash"
             >
-              <p>The lush, riverine heart of southern Vietnam with floating markets, traditional villages, and endless waterways.</p>
-              <ul className="list-disc pl-5">
+              <p className="text-lg text-gray-600 mb-4">The lush, riverine heart of southern Vietnam with floating markets, traditional villages, and endless waterways.</p>
+              <ul className="list-disc pl-6 text-gray-600">
                 <li>Boat tours to Cai Rang floating market</li>
                 <li>Local homestays & cycling tours</li>
-                <li>Rice paddies & fruit orchards</li>
+                <li>Rice paddies & tropical fruit orchards</li>
                 <li>Sunset cruises & bird watching</li>
               </ul>
             </Collapsible>
           </Section>
 
           <Section id="festivals" title="Top Festivals in Vietnam">
-            <img
-              src="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/festivals.jpg"
-              alt="Colorful lanterns at Hoi An Lantern Festival"
-              className="w-full h-64 object-cover rounded-lg mb-4 transform hover:scale-105 transition-transform duration-300"
-            />
-            <ul className="list-disc pl-5">
-              <li><strong>Tet (Lunar New Year):</strong> Vietnam’s biggest celebration, usually in late January or February. Streets come alive with flowers, food, and fireworks.</li>
-              <li><strong>Mid-Autumn Festival:</strong> Lantern parades and mooncakes in September or October, especially magical for families and children.</li>
-              <li><strong>Hue Festival:</strong> Biennial cultural festival in Hue with music, art, and traditional performances.</li>
-              <li><strong>Hoi An Lantern Festival:</strong> Monthly, on the full moon, the old town glows with thousands of lanterns.</li>
-              <li><strong>Da Nang International Fireworks Festival:</strong> World-class fireworks competition held every summer, lighting up the Han River.</li>
-              <li><strong>Phu Quoc New Year’s Festivals:</strong> Beach parties, fireworks, and live music on the island’s main beaches every December 31st.</li>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1579769132875-142cecc62e36"
+                alt="Glowing colorful lanterns illuminating Hoi An’s old town during the Lantern Festival at night"
+                className="w-full h-96 object-cover rounded-xl shadow-lg mb-6 transform hover:scale-105 transition-transform duration-300"
+              />
+              <p className="text-sm text-gray-500 absolute bottom-2 right-2 bg-white bg-opacity-75 px-2 py-1 rounded">
+                Photo by Luke Stackpoole on Unsplash
+              </p>
+            </div>
+            <ul className="list-disc pl-6 text-gray-600">
+              <li><strong>Tet (Lunar New Year):</strong> Vietnam’s grandest celebration in late January or February, with vibrant flowers, street food, and fireworks.</li>
+              <li><strong>Mid-Autumn Festival:</strong> Magical lantern parades and mooncakes in September or October, perfect for families.</li>
+              <li><strong>Hue Festival:</strong> Biennial cultural extravaganza in Hue with music, art, and traditional performances.</li>
+              <li><strong>Hoi An Lantern Festival:</strong> Monthly full-moon celebration with thousands of glowing lanterns in the old town.</li>
+              <li><strong>Da Nang International Fireworks Festival:</strong> Spectacular summer fireworks competition lighting up the Han River.</li>
+              <li><strong>Phu Quoc New Year’s Festivals:</strong> Lively beach parties with fireworks and live music on December 31st.</li>
             </ul>
           </Section>
 
-          <Section id="activities" title="Adventure Activities">
+          <Section id="activities" title="Adventure Activities & Tours">
             <Collapsible
               title="Jungle Adventures"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/jungle-adventures.jpg"
-              imageAlt="Dense jungle trail in Phong Nha-Ke Bang National Park"
+              imageSrc="https://images.pexels.com/photos/1320686/pexels-photo-1320686.jpeg"
+              imageAlt="Lush jungle trail with towering trees and sunlight filtering through in Phong Nha-Ke Bang National Park"
+              imageSource="Photo by Quang Nguyen Vinh on Pexels"
             >
-              <p>Explore the wild jungles of Vietnam on guided treks, wildlife spotting, and camping trips in Cat Tien, Bach Ma, and Phong Nha-Ke Bang National Parks.</p>
-              <ul className="list-disc pl-5">
-                <li>Guided jungle treks</li>
-                <li>Wildlife & bird watching</li>
-                <li>Camping & river kayaking</li>
-              </ul>
+              <p className="text-lg text-gray-600 mb-4">Explore Vietnam’s wild jungles through guided treks, wildlife spotting, and camping in Cat Tien, Bach Ma, and Phong Nha-Ke Bang National Parks.</p>
+              <Tour
+                title="Phong Nha Cave Trek"
+                description="A thrilling guided trek through Phong Nha-Ke Bang National Park, exploring hidden caves and spotting exotic wildlife."
+                imageSrc="https://images.unsplash.com/photo-1594032191504-76b5e6a2e6dd"
+                imageAlt="Adventurer exploring a dark, mystical cave in Phong Nha-Ke Bang National Park"
+                imageSource="Photo by Tom Fisk on Unsplash"
+              />
+              <Tour
+                title="Cat Tien Wildlife Safari"
+                description="An overnight camping adventure in Cat Tien National Park, with guided wildlife spotting and river kayaking."
+                imageSrc="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg"
+                imageAlt="Dense jungle of Cat Tien National Park with a serene river for kayaking"
+                imageSource="Photo by Pixabay on Pexels"
+              />
             </Collapsible>
             <Collapsible
               title="4x4 Offroad Trips"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/offroad.jpg"
-              imageAlt="4x4 vehicle crossing sand dunes in Mui Ne"
+              imageSrc="https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg"
+              imageAlt="4x4 vehicle navigating golden sand dunes under a clear sky in Mui Ne"
+              imageSource="Photo by Pixabay on Pexels"
             >
-              <p>Take on Vietnam’s rugged terrain with thrilling 4x4 adventures from the mountains of the north to the sand dunes of Mui Ne.</p>
-              <ul className="list-disc pl-5">
-                <li>Mountain & jungle routes</li>
-                <li>Sand dunes & river crossings</li>
-                <li>Expert guides & support vehicles</li>
-              </ul>
+              <p className="text-lg text-gray-600 mb-4">Tackle Vietnam’s rugged terrain with thrilling 4x4 adventures from northern mountains to Mui Ne’s sand dunes.</p>
+              <Tour
+                title="Mui Ne Sand Dune Adventure"
+                description="A high-adrenaline 4x4 tour across Mui Ne’s iconic white and red sand dunes, with stunning desert views."
+                imageSrc="https://images.unsplash.com/photo-1516627145497-ae696f9a9b74"
+                imageAlt="Red sand dunes of Mui Ne under a vibrant sunset, with 4x4 tracks"
+                imageSource="Photo by Luke Stackpoole on Unsplash"
+              />
+              <Tour
+                title="Northern Mountain Expedition"
+                description="A rugged 4x4 journey through the northern mountains, crossing rivers and exploring remote villages."
+                imageSrc="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg"
+                imageAlt="Rugged mountain terrain in Northern Vietnam with a 4x4 trail"
+                imageSource="Photo by Pixabay on Pexels"
+              />
             </Collapsible>
             <Collapsible
               title="Scuba Diving"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/scuba-diving.jpg"
-              imageAlt="Vibrant coral reefs and marine life in Phu Quoc"
+              imageSrc="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg"
+              imageAlt="Divers exploring vibrant coral reefs and colorful marine life in Phu Quoc’s clear waters"
+              imageSource="Photo by Quang Nguyen Vinh on Pexels"
             >
-              <p>Discover vibrant coral reefs and marine life in Phu Quoc, Nha Trang, and Con Dao, perfect for beginners and experienced divers.</p>
-              <ul className="list-disc pl-5">
-                <li>Guided dive tours & PADI courses</li>
-                <li>Snorkeling for all ages</li>
-                <li>Wreck diving & night dives</li>
-              </ul>
+              <p className="text-lg text-gray-600 mb-4">Discover vibrant coral reefs and marine life in Phu Quoc, Nha Trang, and Con Dao, ideal for all diving levels.</p>
+              <Tour
+                title="Phu Quoc Coral Reef Dive"
+                description="A guided scuba diving tour exploring Phu Quoc’s An Thoi archipelago, with vibrant corals and marine life."
+                imageSrc="https://images.unsplash.com/photo-1544551763-46a013bb70d5"
+                imageAlt="Colorful coral reefs and tropical fish in Phu Quoc’s An Thoi archipelago"
+                imageSource="Photo by Jeremy Bishop on Unsplash"
+              />
+              <Tour
+                title="Nha Trang Night Dive"
+                description="An exhilarating night dive in Nha Trang, exploring underwater wrecks and nocturnal marine life."
+                imageSrc="https://images.pexels.com/photos/995353/pexels-photo-995353.jpeg"
+                imageAlt="Nighttime underwater scene with divers illuminating marine life in Nha Trang"
+                imageSource="Photo by Pixabay on Pexels"
+              />
             </Collapsible>
             <Collapsible
               title="Boat Braais"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/boat-braai.jpg"
-              imageAlt="Boat party with BBQ and music on a Vietnamese island"
+              imageSrc="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+              imageAlt="Lively boat party with BBQ and music on a pristine Vietnamese island under a clear sky"
+              imageSource="Photo by Sean Oulashin on Unsplash"
             >
-              <p>BBQ, beers, islands, and music—perfect for groups and parties!</p>
+              <p className="text-lg text-gray-600 mb-4">Enjoy BBQ, beers, island vibes, and music—perfect for group celebrations!</p>
+              <Tour
+                title="Secret Island BBQ & Party"
+                description="A lively boat tour to a secret island with a beach BBQ, live music, and sunset views."
+                imageSrc="https://images.pexels.com/photos/314937/pexels-photo-314937.jpeg"
+                imageAlt="Beach BBQ setup on a secret Vietnamese island with turquoise waters"
+                imageSource="Photo by Pixabay on Pexels"
+              />
             </Collapsible>
             <Collapsible
               title="Golf Tours"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/golf.jpg"
-              imageAlt="Scenic fairway at Ba Na Hills Golf Club in Da Nang"
+              imageSrc="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg"
+              imageAlt="Lush green fairway at Ba Na Hills Golf Club with a tropical mountain backdrop"
+              imageSource="Photo by Pixabay on Pexels"
             >
-              <p>Play at award-winning golf courses in Da Nang, Ho Chi Minh City, Hanoi, and Phu Quoc with scenic fairways and world-class facilities.</p>
+              <p className="text-lg text-gray-600 mb-4">Play at award-winning golf courses in Da Nang, Ho Chi Minh City, Hanoi, and Phu Quoc with stunning views.</p>
+              <Tour
+                title="Ba Na Hills Golf Experience"
+                description="A premium golf tour at Ba Na Hills Golf Club in Da Nang, with scenic fairways and world-class facilities."
+                imageSrc="https://images.unsplash.com/photo-1517226662618-6d6b1bc1694a"
+                imageAlt="Golfer on a scenic fairway at Ba Na Hills Golf Club with rolling hills"
+                imageSource="Photo by Courtney Cook on Unsplash"
+              />
             </Collapsible>
             <Collapsible
               title="Bike Rentals for Cross-Country Trips"
-              imageSrc="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/motorbike.jpg"
-              imageAlt="Motorbike on the Hai Van Pass with coastal views"
+              imageSrc="https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg"
+              imageAlt="Motorbike cruising along the scenic Hai Van Pass with coastal views and mountains"
+              imageSource="Photo by Pixabay on Pexels"
             >
-              <p>Vietnam is a dream for motorbike adventures. Rent a bike and explore the legendary Hai Van Pass, the Mekong Delta, or the entire country.</p>
-              <ul className="list-disc pl-5">
-                <li>Popular routes: Hanoi to Ho Chi Minh City, Ho Chi Minh Road, coastal route via Da Nang and Nha Trang</li>
-                <li>Recommended rental companies: Tigit Motorbikes, Rent A Bike Vietnam</li>
-                <li>One-way rentals available</li>
-                <li>Automatic, semi-automatic, and manual bikes</li>
-                <li>Helmets and gear provided</li>
-              </ul>
-              <p className="mt-2">Always check your license and insurance requirements before starting your journey!</p>
+              <p className="text-lg text-gray-600 mb-4">Vietnam is a dream for motorbike adventures. Rent a bike and explore the legendary Hai Van Pass, the Mekong Delta, or the entire country.</p>
+              <Tour
+                title="Hai Van Pass Motorbike Journey"
+                description="An epic motorbike ride along the Hai Van Pass, with stunning coastal and mountain views."
+                imageSrc="https://images.unsplash.com/photo-1556048219-3926b9283b5e"
+                imageAlt="Motorbike rider on the winding roads of Hai Van Pass with ocean views"
+                imageSource="Photo by Luke Stackpoole on Unsplash"
+              />
+              <Tour
+                title="Hanoi to Ho Chi Minh City Epic Ride"
+                description="A cross-country motorbike adventure from Hanoi to Ho Chi Minh City, exploring Vietnam’s diverse landscapes."
+                imageSrc="https://images.pexels.com/photos/169677/pexels-photo-169677.jpeg"
+                imageAlt="Motorbike on a scenic rural road in Vietnam with rice fields and mountains"
+                imageSource="Photo by Pixabay on Pexels"
+              />
             </Collapsible>
           </Section>
 
           <Section id="food" title="Best Local Dishes">
-            <img
-              src="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/food.jpg"
-              alt="Banh Mi sandwich with fresh herbs and pork"
-              className="w-full h-64 object-cover rounded-lg mb-4 transform hover:scale-105 transition-transform duration-300"
-            />
-            <ul className="list-disc pl-5">
+            <div className="relative">
+              <img
+                src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg"
+                alt="Freshly prepared Banh Mi sandwich with pork, pate, pickled veggies, and herbs on a vibrant street stall"
+                className="w-full h-96 object-cover rounded-xl shadow-lg mb-6 transform hover:scale-105 transition-transform duration-300"
+              />
+              <p className="text-sm text-gray-500 absolute bottom-2 right-2 bg-white bg-opacity-75 px-2 py-1 rounded">
+                Photo by Clem Onojeghuo on Pexels
+              </p>
+            </div>
+            <ul className="list-disc pl-6 text-gray-600">
               <li><strong>Banh Mi:</strong> Vietnamese baguette sandwich with pork, pate, pickled veggies, and herbs.</li>
               <li><strong>Pho:</strong> Fragrant beef or chicken noodle soup with fresh herbs.</li>
               <li><strong>Bun Cha:</strong> Grilled pork with rice noodles and fresh greens.</li>
@@ -286,26 +440,31 @@
               <li><strong>Cao Lau:</strong> Savory noodles with pork, greens, and crispy croutons (Hoi An specialty).</li>
               <li><strong>Seafood BBQ:</strong> Grilled seafood, especially in coastal cities like Nha Trang.</li>
             </ul>
-            <p className="mt-4">
-              Craving Western food? Check out <a href="https://www.tripadvisor.com" className="text-green-600 hover:underline">TripAdvisor</a> for the best Western restaurants in Vietnam.
+            <p className="mt-4 text-gray-600">
+              Craving Western food? Check out <a href="https://www.tripadvisor.com" className="text-green-700 hover:underline">TripAdvisor</a> for the best Western restaurants in Vietnam.
             </p>
           </Section>
 
           <Section id="travel-info" title="Visa & Travel Info">
-            <img
-              src="https://mzansimeetsvietnam.github.io/Madiba-Meets-Vietnam/images/visa-stamp.jpg"
-              alt="Vietnam visa stamp in a passport"
-              className="w-full h-64 object-cover rounded-lg mb-4 transform hover:scale-105 transition-transform duration-300"
-            />
-            <p>Plan your trip with ease using the <a href="https://evisa.xuatnhapcanh.gov.vn" className="text-green-600 hover:underline">Vietnam Government E-Visa Portal</a>.</p>
-            <ul className="list-disc pl-5 mt-2">
+            <div className="relative">
+              <img
+                src="https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg"
+                alt="Vietnam visa stamp in an open passport, symbolizing travel readiness"
+                className="w-full h-96 object-cover rounded-xl shadow-lg mb-6 transform hover:scale-105 transition-transform duration-300"
+              />
+              <p className="text-sm text-gray-500 absolute bottom-2 right-2 bg-white bg-opacity-75 px-2 py-1 rounded">
+                Photo by Porapak Apichodilok on Pexels
+              </p>
+            </div>
+            <p className="text-lg text-gray-600 mb-4">Plan your trip with ease using the <a href="https://evisa.xuatnhapcanh.gov.vn" className="text-green-700 hover:underline">Vietnam Government E-Visa Portal</a>.</p>
+            <ul className="list-disc pl-6 text-gray-600">
               <li><strong>North Vietnam:</strong> Arrive via Hanoi (Noi Bai Airport). Visa on arrival available with e-visa. Check border crossing rules from China.</li>
               <li><strong>Central Vietnam:</strong> Da Nang & Hue accept e-visas at airports and land borders. Ideal for central coast and mountains.</li>
               <li><strong>South Vietnam:</strong> Ho Chi Minh City is the main gateway. E-visa accepted at Tan Son Nhat airport and land crossings from Cambodia.</li>
             </ul>
-            <p className="mt-2">Always verify the latest visa requirements before booking.</p>
-            <h3 className="text-xl font-semibold mt-4">Best Time to Visit</h3>
-            <ul className="list-disc pl-5">
+            <p className="mt-2 text-gray-600">Always verify the latest visa requirements before booking.</p>
+            <h3 className="text-xl font-semibold text-gray-700 mt-6 mb-4">Best Time to Visit</h3>
+            <ul className="list-disc pl-6 text-gray-600">
               <li><strong>North Vietnam:</strong> March–May & September–November (cool, dry, best for trekking and sightseeing)</li>
               <li><strong>Central Vietnam:</strong> February–August (beaches and cities are sunny, but watch for typhoons in late summer)</li>
               <li><strong>South Vietnam:</strong> October–March (dry, sunny, best for islands and Ho Chi Minh City)</li>
@@ -313,29 +472,29 @@
           </Section>
 
           <Section id="contact" title="Contact & TEFL Opportunities">
-            <p>Interested in teaching English in Vietnam? We offer TEFL job placement and accommodation assistance for native or fluent English speakers.</p>
-            <ul className="list-disc pl-5">
+            <p className="text-lg text-gray-600 mb-4">Interested in teaching English in Vietnam? We offer TEFL job placement and accommodation assistance for native or fluent English speakers.</p>
+            <ul className="list-disc pl-6 text-gray-600">
               <li>TEFL job placement in schools, language centers, and kindergartens</li>
               <li>Visa and work permit guidance</li>
               <li>Assistance with finding apartments or shared housing</li>
               <li>On-the-ground support and orientation</li>
               <li>Connect with a community of teachers</li>
             </ul>
-            <p className="mt-4">
-              Reach out for more info: <a href="mailto:hughboynewlands@gmail.com" className="text-green-600 hover:underline">hughboynewlands@gmail.com</a> or WhatsApp <a href="tel:+27794720078" className="text-green-600 hover:underline">+27 79 472 0078</a>.
+            <p className="mt-4 text-gray-600">
+              Reach out for more info: <a href="mailto:hughboynewlands@gmail.com" className="text-green-700 hover:underline">hughboynewlands@gmail.com</a> or WhatsApp <a href="tel:+27794720078" className="text-green-700 hover:underline">+27 79 472 0078</a>.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-gray-600">
               Share this page: 
-              <a href="https://twitter.com" className="text-green-600 hover:underline mx-2">Twitter</a>
-              <a href="https://whatsapp.com" className="text-green-600 hover:underline mx-2">WhatsApp</a>
-              <a href="mailto:?subject=Madiba Meets Vietnam" className="text-green-600 hover:underline mx-2">Email</a>
+              <a href="https://twitter.com" className="text-green-700 hover:underline mx-2">Twitter</a>
+              <a href="https://whatsapp.com" className="text-green-700 hover:underline mx-2">WhatsApp</a>
+              <a href="mailto:?subject=Madiba Meets Vietnam" className="text-green-700 hover:underline mx-2">Email</a>
             </p>
-            <p className="mt-4">
-              Explore Vietnam on <a href="https://maps.google.com" className="text-green-600 hover:underline">Google Maps</a>.
+            <p className="mt-4 text-gray-600">
+              Explore Vietnam on <a href="https://maps.google.com" className="text-green-700 hover:underline">Google Maps</a>.
             </p>
           </Section>
 
-          <footer className="bg-green-600 text-white p-4 text-center">
+          <footer className="bg-green-700 text-white p-6 text-center">
             <p>&copy; 2025 Madiba Meets Vietnam. All rights reserved.</p>
           </footer>
         </div>
