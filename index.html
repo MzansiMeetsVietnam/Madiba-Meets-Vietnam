@@ -1,90 +1,95 @@
-<!-- Destinations Section -->
-<section class="py-12 bg-gray-100">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">Explore Vietnam’s Hidden Gems</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- South Vietnam -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1598961940731-5e3c9a2e3b00?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Phu Quoc Beach" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold">South Vietnam</h3>
-          <p class="text-gray-600">Phu Quoc’s beaches, HCMC’s buzz, Nha Trang’s islands. Snorkel, braai, or dance with DJ upgrades.</p>
-          <a href="south-vietnam.html" class="text-green-700 hover:underline mt-2 inline-block">Discover Tours</a>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madiba Meets Mekong</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
 
-      <!-- Central Vietnam -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1504457047772-27faf0c8ec96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Phong Nha Caves" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold">Central Vietnam</h3>
-          <p class="text-gray-600">
-            Hue’s history, Da Nang’s fireworks, Phong Nha’s epic caves, and Dalat’s cool mountain charm. Adventure awaits!
-          </p>
-          <a href="central-vietnam.html" class="text-green-700 hover:underline mt-2 inline-block">Discover Tours</a>
-          <br />
-          <a href="dalat.html" class="text-green-700 hover:underline mt-2 inline-block">Explore Dalat</a>
-        </div>
-      </div>
+  <!-- Header -->
+  <header class="bg-green-800 text-white py-6 shadow-md">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold">Madiba Meets Mekong</h1>
+      <p class="text-lg">One-week tours from $400 – Discover Vietnam’s hidden gems!</p>
+    </div>
+  </header>
 
-      <!-- North Vietnam -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ha Long Bay" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold">North Vietnam</h3>
-          <p class="text-gray-600">Hanoi’s charm, Sapa’s treks, Ha Long Bay’s beauty. Unforgettable journeys.</p>
-          <a href="north-vietnam.html" class="text-green-700 hover:underline mt-2 inline-block">Discover Tours</a>
+  <!-- Hero Image with Map -->
+  <section class="relative h-[400px]">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Vietnam_regions_map.png" alt="Vietnam Map" class="w-full h-full object-cover opacity-80">
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-40">
+      <h2 class="text-4xl font-bold mb-4">Explore Vietnam by Region</h2>
+      <div class="flex gap-4">
+        <a href="south-vietnam.html" class="bg-green-700 px-4 py-2 rounded hover:bg-green-600">South Vietnam</a>
+        <a href="central-vietnam.html" class="bg-green-700 px-4 py-2 rounded hover:bg-green-600">Central Vietnam</a>
+        <a href="north-vietnam.html" class="bg-green-700 px-4 py-2 rounded hover:bg-green-600">North Vietnam</a>
+      </div>
+      <a href="https://www.google.com/maps/place/Vietnam" target="_blank" class="mt-4 underline text-sm">View on Google Maps</a>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Top Destinations</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <!-- Dalat -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1528790574193-5bcbd594f4c2?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Dalat">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Dalat</h3>
+            <p class="text-sm text-gray-600">Cool mountains, waterfalls, and flowers galore.</p>
+            <a href="dalat.html" class="text-green-700 hover:underline block mt-2">Explore Dalat</a>
+          </div>
         </div>
+
+        <!-- Nha Trang -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1580795470337-b7d33cc3d9a9?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Nha Trang">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Nha Trang</h3>
+            <p class="text-sm text-gray-600">Beach life, boat tours & seafood braais.</p>
+            <a href="nha-trang.html" class="text-green-700 hover:underline block mt-2">Explore Nha Trang</a>
+          </div>
+        </div>
+
+        <!-- HCMC -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1617191517306-9e569b2df77c?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="HCMC">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Ho Chi Minh City</h3>
+            <p class="text-sm text-gray-600">Bustling streets, war history, rooftop bars.</p>
+            <a href="hcmc.html" class="text-green-700 hover:underline block mt-2">Explore HCMC</a>
+          </div>
+        </div>
+
+        <!-- Phu Quoc -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1627634842627-0d51e92e9423?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Phu Quoc">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Phu Quoc</h3>
+            <p class="text-sm text-gray-600">Island paradise, clear water, private boat tours.</p>
+            <a href="phu-quoc.html" class="text-green-700 hover:underline block mt-2">Explore Phu Quoc</a>
+          </div>
+        </div>
+
+        <!-- Add more destination blocks here later... -->
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Vietnam Map Section -->
-<section class="py-12 bg-white">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">Explore Vietnam on the Map</h2>
-    
-    <div class="relative inline-block max-w-3xl mx-auto">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Vietnam_map_with_regions.svg" alt="Vietnam Map" class="w-full h-auto rounded shadow-lg" />
-      
-      <!-- South Vietnam hotspot -->
-      <a href="south-vietnam.html" target="_self" 
-         style="position:absolute; bottom: 30%; left: 25%; width: 15%; height: 15%;"
-         title="South Vietnam - Tours">
-        <span class="sr-only">South Vietnam Tours</span>
-      </a>
-      <a href="https://goo.gl/maps/gZX1FVLNciDr67pS8" target="_blank"
-         style="position:absolute; bottom: 15%; left: 25%; width: 15%; height: 15%;"
-         title="South Vietnam Location on Google Maps">
-        <span class="sr-only">South Vietnam Google Maps</span>
-      </a>
-
-      <!-- Central Vietnam hotspot -->
-      <a href="central-vietnam.html" target="_self" 
-         style="position:absolute; top: 40%; left: 40%; width: 15%; height: 15%;"
-         title="Central Vietnam - Tours">
-        <span class="sr-only">Central Vietnam Tours</span>
-      </a>
-      <a href="https://goo.gl/maps/vFYhyEwTkjpx5noE6" target="_blank"
-         style="position:absolute; top: 55%; left: 40%; width: 15%; height: 15%;"
-         title="Central Vietnam Location on Google Maps">
-        <span class="sr-only">Central Vietnam Google Maps</span>
-      </a>
-
-      <!-- North Vietnam hotspot -->
-      <a href="north-vietnam.html" target="_self" 
-         style="position:absolute; top: 10%; left: 55%; width: 15%; height: 15%;"
-         title="North Vietnam - Tours">
-        <span class="sr-only">North Vietnam Tours</span>
-      </a>
-      <a href="https://goo.gl/maps/g3vqkXy1xTxXqH7M9" target="_blank"
-         style="position:absolute; top: 25%; left: 55%; width: 15%; height: 15%;"
-         title="North Vietnam Location on Google Maps">
-        <span class="sr-only">North Vietnam Google Maps</span>
-      </a>
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>Contact us at <a href="mailto:hughboynewlands@gmail.com" class="underline">hughboynewlands@gmail.com</a></p>
+      <p>Or message us directly on <a href="https://wa.me/27794720078" class="underline">WhatsApp</a></p>
+      <p class="mt-2 text-sm">© 2025 Madiba Meets Mekong. All rights reserved.</p>
     </div>
+  </footer>
 
-    <p class="mt-6 text-gray-700">Click on the areas above to explore tours or see the region on Google Maps.</p>
-  </div>
-</section>
+</body>
+</html>
